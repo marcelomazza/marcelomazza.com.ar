@@ -1,0 +1,59 @@
+.btn {
+
+	margin-top: 1em;
+	padding: 1em 1.5em;
+	display: inline-block;
+	position: relative;
+	top: 0;
+	font-weight: bold;
+	color: $dark1;
+	background: $light;
+	border-radius: 3px;
+
+	@include box-shadow(0 5px 0 darken($light, 10) );
+	@include transition(all 100ms);
+
+	&:hover {
+
+		background: lighten($light, 15);
+		border: none;
+
+		@include box-shadow(0 5px 0 lighten(darken($light, 10), 15) );
+
+	}
+
+	&:active {
+
+		top: 5px;
+		color: darken($dark1, 10);
+		background: darken($light, 10);
+
+		@include box-shadow(none);
+
+	}
+
+	.switch & {
+
+		color: $light;
+		background: $dark1;
+
+		@include box-shadow(0 5px 0 darken($dark1, 10) );
+
+		&:hover {
+
+			background: lighten($dark1, 15);
+
+			@include box-shadow(0 5px 0 lighten(darken($dark1, 10), 15) );
+
+		}
+
+		&:active {
+
+			color: darken($light, 10);
+			background: darken($dark1, 10);
+
+		}
+
+	}
+
+}

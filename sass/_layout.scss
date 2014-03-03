@@ -1,0 +1,71 @@
+main {
+
+	max-width: 1400px;
+	margin: 0 auto;
+
+}
+
+section {
+
+	margin-bottom: 33.6em;
+
+	@include pie-clearfix;
+
+	&:last-child {
+
+		margin-bottom: 10em;
+
+	}
+
+	[class^="icon-"] {
+
+		margin-bottom: 3em;
+
+		&:before {
+
+			$s: 2em;
+
+			display: inline-block;
+			width: $s;
+			height: $s;
+			color: $dark1;
+			background: $light;
+			font-size: $s;
+			line-height: $s;
+			text-align: center;
+			border-radius: 100%;			
+
+		}
+
+		.switch &:before {
+
+			color: $light;
+			background: $dark1;			
+
+			@include transition(all 500ms);
+
+		}
+
+	}
+
+}
+
+.profile-picture {
+
+	width: 200px;
+	height: 200px;
+	margin-bottom: 1em;
+	border: none;
+	border-radius: 100%;
+
+}
+
+.portfolio {
+
+	h2 {
+
+		font-size: 1.4em;
+
+	}
+
+}

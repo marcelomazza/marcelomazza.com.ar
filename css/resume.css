@@ -1,0 +1,61 @@
+/* line 1, ../sass/resume.scss */
+body {
+  padding: 2.1em;
+  text-align: left;
+  font-size: 13px;
+  background: white;
+  color: black;
+}
+
+/* line 11, ../sass/resume.scss */
+h1 {
+  font-size: 1.5em;
+}
+
+/* line 17, ../sass/resume.scss */
+h2 {
+  font-size: 1em;
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+
+/* line 26, ../sass/resume.scss */
+p {
+  margin-bottom: 0.5em;
+}
+
+/* line 32, ../sass/resume.scss */
+section {
+  margin-bottom: 2em;
+}
+/* line 36, ../sass/resume.scss */
+section [class^="icon-"] {
+  float: left;
+  -webkit-print-color-adjust: exact;
+}
+
+/* line 45, ../sass/resume.scss */
+.profile-picture {
+  width: 75px;
+  height: 75px;
+  float: left;
+  margin-right: 2em;
+}
+
+/* line 54, ../sass/resume.scss */
+.side {
+  width: 15%;
+  float: left;
+}
+
+/* line 61, ../sass/resume.scss */
+.content {
+  width: 85%;
+  float: left;
+}
+
+/* line 68, ../sass/resume.scss */
+.skills li {
+  width: 50%;
+  float: left;
+}

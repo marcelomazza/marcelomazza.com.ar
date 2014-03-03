@@ -1,0 +1,97 @@
+body {
+
+	padding: 6.2em 1.05em;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	line-height: 1.4em;
+	color: $light;
+	background: $dark1;
+	text-align: center;
+
+	@include transition(all 500ms);
+
+	&.switch {
+
+		color: $dark1;
+		background: $light;
+
+	}
+
+}
+
+a {
+
+	text-decoration: none;
+	color: $dark3;
+
+	&:hover {
+
+		border-bottom: 2px solid $light;
+
+	}
+
+}
+
+ul {
+
+	list-style: disc;
+
+}
+
+h1 {
+
+	font-weight: bold;
+	font-size: 2.5em;
+	line-height: 1.2em;
+	margin-bottom: 0.8em;
+
+}
+
+h2 {
+
+	font-weight: bold;
+	font-size: 2em;
+	line-height: 1.05em;
+	margin-bottom: 0.35em;
+
+}
+
+p, ul {
+
+	margin-bottom: 1.4em;
+
+}
+
+img {
+
+	max-width: 100%;
+	border: 5px solid $light;
+
+}
+
+@media screen and (min-width: $small) {
+
+	body {
+
+		padding: 6.2em 2.1em;
+		font-size: 20px;
+
+	}
+
+	h2 {
+
+		margin-top: 1.05em;
+
+	}
+	
+}
+
+@media screen and (min-width: $large) {
+
+	body {
+
+		padding: 8.2em 4.2em;
+
+	}
+	
+}

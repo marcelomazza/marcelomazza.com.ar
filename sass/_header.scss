@@ -1,0 +1,233 @@
+header {
+
+	margin-bottom: 2em;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	padding: 1em;
+	background: $dark1;
+	border-bottom: 1px solid $light;
+	text-align: left;
+	z-index: 100;
+
+	@include transition(all 500ms);
+
+	.switch & {
+
+		background: $light;
+		border-bottom: 1px solid $dark1;		
+
+	}
+
+	.site-title {
+
+		margin-bottom: 0;
+		width: 90%;
+		font-size: 1em;
+
+	}
+
+	nav {
+
+		//display: none;
+		max-height: 0;
+		//margin-top: 1.25em;
+		overflow: hidden;
+
+		a {
+
+			margin-bottom: 1em;
+			display: block;
+			border-bottom: 2px solid $dark2;
+
+		}
+
+		ul {
+
+			list-style: none;
+
+		}
+
+		&.is-active {
+
+			max-height: 250px;
+			height: auto;
+			margin-top: 1.25em;
+
+		}
+
+	}
+
+	.btn {
+
+		margin: 1em 0 0;
+		padding: 0.5em 1.5em;
+		font-size: 0.8em;
+		border-bottom: none;
+
+	}	
+
+}
+
+.nav-toggle {
+
+	position: absolute;
+	top: 0.5em;
+	right: 0.5em;
+	font-size: 1.5em;
+
+	&:hover {
+
+		border: none;
+
+	}	
+
+}
+
+@media screen and (min-width: $small) and (max-width: $medium) {
+
+	.site-title {
+
+		text-align: center;
+
+	}
+
+}
+
+@media screen and (min-width: $small) {
+
+	header {
+
+		padding: 1.5em;
+
+		.site-title {
+
+			width: auto;
+
+		}
+
+		nav {
+			
+			font-size: 0.8em;
+
+			ul {
+
+				margin-bottom: 0;
+				text-align: center;
+
+			}
+
+			li {
+
+				display: inline-block;
+				margin: 0 1em;
+
+			}
+
+		}
+
+	}
+
+	.nav-toggle {
+		
+		top: 0.8em;
+		right: 0.8em;
+
+	}
+
+}
+
+@media screen and (max-width: $medium) {
+
+
+	nav {
+
+		@include transition(all 500ms);
+		
+	}
+
+}
+
+@media screen and (min-width: $medium) {
+
+	header {
+
+		.site-title {
+
+			padding: 0.5em 0em;
+			float: left;
+
+		}
+
+		nav {
+			
+			display: block;
+			float: right;
+			margin-top: 0;
+			max-height: 100px;
+
+			&.is-active {
+
+				max-height: 80px;
+				margin-top: 0;
+
+			}	
+
+			li {
+
+				margin: 0 0 0 2em;
+
+			}
+
+			.btn {
+
+				margin: 0;
+
+			}
+
+		}
+
+	}
+
+	.nav-toggle {
+		
+		display: none;
+
+	}
+
+}
+
+@media screen and (min-width: $large) {
+
+	header {
+
+		.site-title {
+
+			font-size: 1.5em;
+			padding: 0.5em 1.5em;
+
+		}
+
+		nav {
+
+			font-size: 1em;
+
+			&.is-active {
+
+				margin-top: 0;
+
+			}
+
+			.btn {
+
+				margin: 0.6em 0 0;
+
+			}
+
+		}
+
+	}
+
+}

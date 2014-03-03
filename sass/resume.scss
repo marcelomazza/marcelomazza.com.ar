@@ -1,0 +1,73 @@
+body {
+
+	padding: 2.1em;
+	text-align: left;
+	font-size: 13px;
+	background: white;
+	color: black;
+
+}
+
+h1 {
+
+	font-size: 1.5em;
+
+}
+
+h2 {
+
+	font-size: 1em;
+	margin-top: 2em;
+	margin-bottom: 1em;
+
+
+}
+
+p {
+
+	margin-bottom: 0.5em;
+
+}
+
+section {
+
+	margin-bottom: 2em;
+
+	[class^="icon-"] {
+
+		float: left;
+		-webkit-print-color-adjust: exact;
+
+	}
+
+}
+
+.profile-picture {
+
+	width: 75px;
+	height: 75px;
+	float: left;
+	margin-right: 2em;
+
+}
+
+.side {
+
+	width: 15%;
+	float: left;
+
+}
+
+.content {
+
+	width: 85%;
+	float: left;
+
+}
+
+.skills li {
+
+	width: 50%;
+	float: left;
+
+}
