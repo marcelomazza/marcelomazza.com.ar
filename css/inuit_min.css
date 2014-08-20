@@ -1,0 +1,29 @@
+@charset "UTF-8";
+/*------------------------------------*\
+	INUIT.CSS
+\*------------------------------------*/
+/*
+Author:             Harry Roberts
+Twitter:            @inuitcss
+Author URL:         csswizardry.com
+Project URL:        inuitcss.com
+Version:            1.5.1
+Codename:           Eskimo
+Date:               29 May 2011
+
+Copyright 2011 Harry Roberts
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+*/
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}address,caption,cite,dfn,th,var{font-style:normal;font-weight:normal}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}q:before,q:after{content:''}abbr,acronym{border:0}html{overflow-y:scroll;font-size:100%;font-family:Cambria,Georgia,"Times New Roman",serif;line-height:1.5;background:#fff;color:#333}body{width:940px;min-height:100%;padding:10px;margin:0 auto}.grids{margin-left:-20px;clear:both;width:960px}ul.grids,.cols-12 ul.grids{margin:0 0 0 -20px;list-style:none}.grid{float:left;margin:0 20px 0 0}.grids .grid{display:inline;margin:0 0 0 20px}.cf,.grids{zoom:1}.cf:before,.grids:before,.cf:after,.grids:after{content:"";display:table}.cf:after,.grids:after{clear:both}.grid-1{width:40px}.grid-2{width:100px}.grid-3{width:160px}.grid-4{width:220px}.grid-5{width:280px}.grid-6{width:340px}.grid-7{width:400px}.grid-8{width:460px}.grid-9{width:520px}.grid-10{width:580px}.grid-11{width:640px}.grid-12{width:700px}.grid-13{width:760px}.grid-14{width:820px}.grid-15{width:880px}.grid-16{width:940px;margin:0}h1{font-size:2em;margin-bottom:0.75em;line-height:1.5}h2{font-size:1.5em;margin-bottom:1em;line-height:1}h3{font-size:1.25em;margin-bottom:1.2em;line-height:1.2}h4{font-size:1.125em;margin-bottom:1.333em;line-height:1.333}h5{font-weight:bold}h5,h6{font-size:1em;margin-bottom:1.5em;line-height:1.5}p{margin-bottom:1.5em}a{text-decoration:none;color:#F00}a:visited{opacity:0.8}a:hover{text-decoration:underline}a:active,a:focus{position:relative;top:1px}ul,ol{margin:0 0 1.5em 60px}ul ul,ol ol,ul ol,ol ul{margin:0 0 0 60px}dl{margin-bottom:1.5em}dt{font-weight:bold}dt:after{content:":"}dt::after{content:":"}dd{margin-left:60px}q,i,em,cite{font-style:italic;font-weight:inherit}b,strong{font-weight:bold;font-style:inherit}mark{background:#ffc}s,del{text-decoration:line-through}small{font-size:0.75em;line-height:1}pre,code{font-family:monospace;font-size:1em}pre{overflow:auto;margin-bottom:1.5em;line-height:24px}code{line-height:1}img{max-width:100%;height:auto;font-style:italic;color:#c00}img.left{margin:0 20px 0 0}img.right{margin:0 0 0 20px}object,embed,video{max-width:100%;height:auto}.left{float:left}.right{float:right}.clear{clear:both;float:none}.text-left{text-align:left}.text-right{text-align:right}.text-center,.text-centre{text-align:center}@media (min-width:721px) and (max-width:960px){body{width:700px;background:url(../img/css/grid-720.png) top center repeat-y}.grids{width:720px}.grid-1{width:25px}.grid-2{width:70px}.grid-3{width:115px}.grid-4{width:160px}.grid-5{width:205px}.grid-6{width:250px}.grid-7{width:295px}.grid-8{width:340px}.grid-9{width:385px}.grid-10{width:430px}.grid-11{width:475px}.grid-12{width:520px}.grid-13{width:565px}.grid-14{width:610px}.grid-15{width:655px}.grid-16{width:700px}ul,ol{margin:0 0 1.5em 45px}ul ul,ol ol,ul ol,ol ul{margin:0 0 0 45px}dd{margin-left:45px}.cols-12 ul,.cols-12 ol,.cols-12 dd{margin-left:60px}}@media (max-width:720px){html,body{background:#fff}html{font-size:1.125em}body{padding:20px;width:auto;-webkit-text-size-adjust:none}.grids{margin:0!important;width:auto}.grid{width:auto;float:none}ul,ol{margin:0 0 1.5em 25px}ul ul,ol ol,ul ol,ol ul{margin:0 0 0 25px}dd{margin-left:25px}img.left,img.right{max-width:50%;height:auto}}@media print{*{background:#fff;color:#000;text-shadow:none!important}body{width:75%;margin:0 auto;font-size:0.75em}.grids{width:auto}.grid{width:auto;float:none;clear:both}img{max-width:100%;height:auto}a:link:after,a:visited:after{content:"("attr(href) ")";font-size:smaller}a:link::after,a:visited::after{content:"("attr(href) ")";font-size:smaller}a[href^="/"]:after{content:"(http://yoururlhere.com"attr(href) ")";font-size:smaller}a[href^="/"]::after{content:"(http://yoururlhere.com"attr(href) ")";font-size:smaller}object:after{content:"Flash/video content. Head to http://yoururlhere.com/ to view this content.";display:block;font-weight:bold;margin-bottom:1.5em}object::after{content:"Flash/video content. Head to http://yoururlhere.com/ to view this content.";display:block;font-weight:bold;margin-bottom:1.5em}}.image-caption{font-size:11px}
