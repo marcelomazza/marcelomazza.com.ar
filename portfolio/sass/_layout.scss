@@ -58,6 +58,29 @@ section {
 	border: none;
 	border-radius: 100%;
 
+	@media screen and (min-width: $small) {
+
+		float: left;
+
+	}
+
+}
+
+.hi {
+
+	.content {
+
+		margin: 0 5%;
+
+		@media screen and (min-width: $small) {
+
+			float: left;
+			width: 65%;
+
+		}
+
+	}
+
 }
 
 .portfolio {

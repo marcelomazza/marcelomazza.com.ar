@@ -8,6 +8,7 @@ var portfolioUI = {
 		this.bindLocalScroll();
 		this.bindSwitchColors();
 		this.bindNavToggle();
+		this.bindOnScroll();
 
 	},
 
@@ -23,21 +24,21 @@ var portfolioUI = {
 		
 	},
 
-	getScrollTarget: function(elem) {
+		getScrollTarget: function(elem) {
 
-		var target = elem.attr('href');
+			var target = elem.attr('href');
 
-		var targetOffset = $(target).offset().top - 140;
+			var targetOffset = $(target).offset().top - 140;
 
-		this.animateScroll(targetOffset);
+			this.animateScroll(targetOffset);
 
-	},
+		},
 
-	animateScroll: function(offset) {
+		animateScroll: function(offset) {
 
-		$('html, body').animate({scrollTop:offset}, 'slow');
+			$('html, body').animate({scrollTop:offset}, 'slow');
 
-	},
+		},
 
 	bindSwitchColors: function() {
 
@@ -58,6 +59,17 @@ var portfolioUI = {
 			e.preventDefault();
 
 			$('nav').toggleClass('is-active');
+
+		});
+
+	},
+
+	bindOnScroll: function() {
+
+		$(window).on('scroll', function() {
+
+			console.log('scrolling');
+			$('.js-header-no-scroll').removeClass('js-header-no-scroll');
 
 		});
 

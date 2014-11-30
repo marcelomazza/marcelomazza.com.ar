@@ -6,13 +6,13 @@ header {
 	top: 0;
 	left: 0;
 	right: 0;
-	padding: 1em;
-	background: $dark1;
+	padding: 0.5em 1em;
+	background: rgba($dark1, 0.85);
 	border-bottom: 1px solid $light;
 	text-align: left;
 	z-index: 100;
 
-	@include transition(all 500ms);
+	@include transition(all $transitionDefault);
 
 	.switch & {
 
@@ -25,7 +25,11 @@ header {
 
 		margin-bottom: 0;
 		width: 90%;
-		font-size: 1em;
+		font-size: 1.2em;
+		padding: 0.2em 0;
+
+		@include transition(all $transitionDefault);
+
 
 	}
 
@@ -35,6 +39,8 @@ header {
 		max-height: 0;
 		//margin-top: 1.25em;
 		overflow: hidden;
+
+		@include transition(all $transitionDefault);
 
 		a {
 
@@ -66,6 +72,8 @@ header {
 		padding: 0.5em 1.5em;
 		font-size: 0.8em;
 		border-bottom: none;
+
+		@include transition(all $transitionDefault);
 
 	}	
 
@@ -100,7 +108,7 @@ header {
 
 	header {
 
-		padding: 1.5em;
+		padding: 0.85em;
 
 		.site-title {
 
@@ -156,7 +164,7 @@ header {
 
 		.site-title {
 
-			padding: 0.5em 0em;
+			// padding: 0.5em 0em;
 			float: left;
 
 		}
@@ -201,33 +209,33 @@ header {
 
 @media screen and (min-width: $large) {
 
-	header {
+	// .js-header-no-scroll {
 
-		.site-title {
+	// 	.site-title {
 
-			font-size: 1.5em;
-			padding: 0.5em 1.5em;
+	// 		font-size: 1.5em;
+	// 		padding: 0.5em 1.5em;
 
-		}
+	// 	}
 
-		nav {
+	// 	nav {
 
-			font-size: 1em;
+	// 		font-size: 1em;
 
-			&.is-active {
+	// 		&.is-active {
 
-				margin-top: 0;
+	// 			margin-top: 0;
 
-			}
+	// 		}
 
-			.btn {
+	// 		.btn {
 
-				margin: 0.6em 0 0;
+	// 			margin: 0.6em 0 0;
 
-			}
+	// 		}
 
-		}
+	// 	}
 
-	}
+	// }
 
 }
