@@ -7,18 +7,14 @@ body {
 	color: $light;
 	background: $dark1;
 	background-image:
-		linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.75)),
-		linear-gradient(75deg, rgba(150, 75, 123, 0.5), rgba(189, 26, 98, 0.75));
+
+		linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+		linear-gradient(75deg, rgba($gradientStart, 0.5), rgba($gradientEnd, 0.75));
+		// linear-gradient(rgba(150, 75, 123, 0.5), rgba(189, 26, 98, 0.75)),
+		// linear-gradient(75deg, rgba(blue, 0.5), rgba(yellow, 0.75));
 	text-align: left;
 
 	@include transition(all 500ms);
-
-	&.switch {
-
-		color: $dark1;
-		background: $light;	
-
-	}
 
 }
 
@@ -49,7 +45,7 @@ h1, h2 {
 
 h1 {
 
-	font-size: 2.5em;
+	font-size: 3em;
 	line-height: 1.2em;
 	margin-bottom: 0.8em;
 

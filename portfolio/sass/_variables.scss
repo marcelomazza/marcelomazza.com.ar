@@ -3,12 +3,17 @@ $dark1: #464B59;
 $dark2: #59667D;
 $dark3: #8B99AD;
 $light: #EFE6C2;
+$gradientStart: #964B7B;
+$gradientEnd: #BD1A62;
+
+// Transition duration
+$transitionDefault: 500ms;
+$transitionLong: 1s;
 
 // RWD
 $small: 700px;
 $medium: 1000px;
 $large: 1200px;
 
-// Transition duration
-$transitionDefault: 500ms;
-$transitionLong: 1s;
+// media queries
+$min-width-small: "(min-width: $small)";

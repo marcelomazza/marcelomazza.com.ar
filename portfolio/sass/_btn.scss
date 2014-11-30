@@ -32,28 +32,4 @@
 
 	}
 
-	.switch & {
-
-		color: $light;
-		background: $dark1;
-
-		@include box-shadow(0 5px 0 darken($dark1, 10) );
-
-		&:hover {
-
-			background: lighten($dark1, 15);
-
-			@include box-shadow(0 5px 0 lighten(darken($dark1, 10), 15) );
-
-		}
-
-		&:active {
-
-			color: darken($light, 10);
-			background: darken($dark1, 10);
-
-		}
-
-	}
-
 }

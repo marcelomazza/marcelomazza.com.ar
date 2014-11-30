@@ -37,15 +37,6 @@ section {
 
 		}
 
-		.switch &:before {
-
-			color: $light;
-			background: $dark1;			
-
-			@include transition(all 500ms);
-
-		}
-
 	}
 
 }
@@ -66,7 +57,7 @@ section {
 
 }
 
-.hi {
+.top {
 
 	.content {
 
