@@ -17,25 +17,23 @@ var portfolioUI = {
 
 			e.preventDefault();
 
-			portfolioUI.getScrollTarget($(this));
+			var hash = this.hash;
+
+			var targetScroll = $(hash).offset().top;
+
+			portfolioUI.animateScroll(targetScroll, hash);
 
 		});
 		
 	},
 
-		getScrollTarget: function(elem) {
+		animateScroll: function(targetScroll, hash) {
 
-			var target = elem.attr('href');
+			$('html, body').animate({scrollTop:targetScroll}, 'slow', function() {
 
-			var targetOffset = $(target).offset().top - 140;
+				window.location.hash = hash;
 
-			this.animateScroll(targetOffset);
-
-		},
-
-		animateScroll: function(offset) {
-
-			$('html, body').animate({scrollTop:offset}, 'slow');
+			});
 
 		},
 
@@ -67,60 +65,60 @@ var portfolioUI = {
 portfolioUI.init();
 
 
-// // Hide Header on on scroll down
-// var didScroll;
-// var lastScrollTop = 0;
-// var delta = 5;
+// Hide Header on on scroll down
+var didScroll;
+var lastScrollTop = 0;
+var delta = 5;
 
-// $(window).scroll(function(event){
-//     didScroll = true;
-// });
+$(window).scroll(function(event){
+    didScroll = true;
+});
 
-// setInterval(function() {
-//     if (didScroll) {
-//         hasScrolled();
-//         didScroll = false;
-//     }
-// }, 250);
+setInterval(function() {
+    if (didScroll) {
+        hasScrolled();
+        didScroll = false;
+    }
+}, 10);
 
-// setInterval(function() {
-//     if (!didScroll) {
-//     	hasNotScrolled();
-//     }
-// }, 5000);
+setInterval(function() {
+    if (!didScroll) {
+    	hasNotScrolled();
+    }
+}, 5000);
 
-// function hasScrolled() {
-//     var st = $(this).scrollTop();
+function hasScrolled() {
+    var st = $(this).scrollTop();
 
-//     // Make sure they scroll more than delta
-//     if (Math.abs(lastScrollTop - st) <= delta) {
-//         return;
-//     }
+    // Make sure they scroll more than delta
+    if (Math.abs(lastScrollTop - st) <= delta) {
+        return;
+    }
     
-//     // If they scrolled down and are past the navbar, add class .nav-up.
-//     // This is necessary so you never see what is "behind" the navbar.
-//         // Scroll Down
-//         $('header').removeClass('nav-up').addClass('nav-down');
-//         // Scroll Up
-//         if(st === 0) {
-//             $('header').removeClass('nav-down').addClass('nav-up');
-//         }
+    // If they scrolled down and are past the navbar, add class .nav-up.
+    // This is necessary so you never see what is "behind" the navbar.
+        // Scroll Down
+        $('header').removeClass('nav-large').addClass('nav-short');
+        // Scroll Up
+        if(st === 0) {
+            $('header').removeClass('nav-short').addClass('nav-large');
+        }
     
-//     lastScrollTop = st;
-// }
+    lastScrollTop = st;
+}
 
-// function hasNotScrolled() {
+function hasNotScrolled() {
 
-// 	$('header').removeClass('nav-down').addClass('nav-up');
+	$('header').removeClass('nav-down').addClass('nav-up');
 
-// }
+}
 
-// function hideNav() {
+function hideNav() {
 
-// 	$(window).on('mousemove', function() {
+	$(window).on('mousemove', function() {
 
-// 		$('header').removeClass('nav-up').addClass('nav-down');
+		$('header').removeClass('nav-up').addClass('nav-down');
 
-// 	});
+	});
 
-// }
+}
