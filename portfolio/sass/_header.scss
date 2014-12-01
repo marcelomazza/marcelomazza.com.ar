@@ -65,8 +65,10 @@ header {
 	@media screen and (min-width: $medium) {
 
 		float: left;
-		font-size: 0.85em;
-		line-height: 1.8em;
+		
+		.nav-large & {
+			line-height: 2.5em;
+		}
 
 	}
 
@@ -75,6 +77,7 @@ header {
 		.nav-large & {
 
 			font-size: 1.5em;
+			line-height: 1.8em;
 			padding: 0.5em 1.5em;
 
 		}
