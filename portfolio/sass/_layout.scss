@@ -8,7 +8,6 @@ main {
 section {
 
 	margin-bottom: 33.6em;
-	padding-top: 10em;
 
 	@include pie-clearfix;
 
@@ -17,6 +16,12 @@ section {
 		margin-bottom: 10em;
 
 	}
+
+	@media screen and (min-width: $small) {
+
+		padding-top: 10em;
+
+	}	
 
 	[class^="icon-"] {
 
@@ -60,24 +65,28 @@ section {
 
 .side {
 
-	float: left;
-	width: 20%;
+	@media screen and (min-width: $small) {
+
+		float: left;
+		width: 20%;
+
+	}	
 
 }
 
 
-	.content {
+.content {
 
-		margin: 0 5%;
+	margin: 0 5%;
 
-		@media screen and (min-width: $small) {
+	@media screen and (min-width: $small) {
 
-			float: left;
-			width: 65%;
-
-		}
+		float: left;
+		width: 65%;
 
 	}
+
+}
 
 
 .portfolio {

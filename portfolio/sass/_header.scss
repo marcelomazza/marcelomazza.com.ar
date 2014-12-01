@@ -162,8 +162,6 @@ nav {
 		display: block;
 		border-bottom: 4px solid transparent;
 
-		@include transition(all 500ms);
-
 		&:hover {
 
 			border-bottom: 4px solid $light;
