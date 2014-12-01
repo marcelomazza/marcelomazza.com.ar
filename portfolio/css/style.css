@@ -291,7 +291,6 @@ section [class^="icon-"]:before {
 /* line 50, ../sass/_layout.scss */
 .profile-picture, .grid-span .grid-picture {
   width: 200px;
-  height: 200px;
   margin-bottom: 1em;
   border: none;
   border-radius: 100%;
@@ -304,26 +303,26 @@ section [class^="icon-"]:before {
 }
 
 @media screen and (min-width: 700px) {
-  /* line 66, ../sass/_layout.scss */
+  /* line 65, ../sass/_layout.scss */
   .side {
     float: left;
     width: 20%;
   }
 }
 
-/* line 78, ../sass/_layout.scss */
+/* line 77, ../sass/_layout.scss */
 .content {
   margin: 0 5%;
 }
 @media screen and (min-width: 700px) {
-  /* line 78, ../sass/_layout.scss */
+  /* line 77, ../sass/_layout.scss */
   .content {
     float: left;
     width: 65%;
   }
 }
 
-/* line 94, ../sass/_layout.scss */
+/* line 93, ../sass/_layout.scss */
 .portfolio h2 {
   font-size: 1.4em;
 }
