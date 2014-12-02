@@ -145,6 +145,7 @@ body {
   body {
     padding: 0em 2.1em;
     font-size: 20px;
+    line-height: 1.6em;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -154,55 +155,71 @@ body {
   }
 }
 
-/* line 40, ../sass/_base.scss */
+/* line 41, ../sass/_base.scss */
 a {
   text-decoration: none;
   color: #8B99AD;
 }
-/* line 45, ../sass/_base.scss */
+/* line 46, ../sass/_base.scss */
 a:hover {
   border-bottom: 2px solid #EFE6C2;
 }
 
-/* line 53, ../sass/_base.scss */
+/* line 54, ../sass/_base.scss */
 ul {
   list-style: disc;
 }
 
-/* line 59, ../sass/_base.scss */
+/* line 60, ../sass/_base.scss */
 h1, h2 {
   font-family: 'Playfair Display', serif;
 }
 
-/* line 65, ../sass/_base.scss */
+/* line 66, ../sass/_base.scss */
 h1 {
   font-size: 3em;
   line-height: 1.2em;
   margin-bottom: 0.8em;
 }
 
-/* line 73, ../sass/_base.scss */
+/* line 74, ../sass/_base.scss */
 h2 {
   font-size: 2em;
   line-height: 1.05em;
   margin-bottom: 0.35em;
 }
 @media screen and (min-width: 700px) {
-  /* line 73, ../sass/_base.scss */
+  /* line 74, ../sass/_base.scss */
   h2 {
     margin-top: 1.05em;
   }
 }
 
-/* line 87, ../sass/_base.scss */
+/* line 88, ../sass/_base.scss */
 p, ul {
   margin-bottom: 1.4em;
 }
+@media screen and (min-width: 700px) {
+  /* line 88, ../sass/_base.scss */
+  p, ul {
+    margin-bottom: 2em;
+  }
+}
 
-/* line 93, ../sass/_base.scss */
+/* line 100, ../sass/_base.scss */
 img {
   max-width: 100%;
   border: 5px solid #EFE6C2;
+}
+
+/* line 107, ../sass/_base.scss */
+strong {
+  font-weight: bold;
+}
+
+/* line 111, ../sass/_base.scss */
+.line {
+  text-decoration: line-through;
 }
 
 /* line 1, ../sass/_grid.scss */

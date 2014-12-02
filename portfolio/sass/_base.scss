@@ -26,6 +26,7 @@ body {
 
 		padding: 0em 2.1em;
 		font-size: 20px;
+		line-height: 1.6em;
 
 	}
 
@@ -88,6 +89,12 @@ p, ul {
 
 	margin-bottom: 1.4em;
 
+	@media screen and (min-width: $small) {
+
+		margin-bottom: 2em;
+
+	}
+
 }
 
 img {
@@ -95,4 +102,12 @@ img {
 	max-width: 100%;
 	border: 5px solid $light;
 
+}
+
+strong {
+	font-weight: bold;
+}
+
+.line {
+	text-decoration: line-through;
 }
