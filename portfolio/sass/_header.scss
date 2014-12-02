@@ -11,8 +11,6 @@ header {
 	text-align: left;
 	z-index: 100;
 
-	@include transition(all $transitionDefault);
-
 	@media screen and (min-width: $small) {
 
 		padding: 0.85em;
@@ -25,7 +23,7 @@ header {
 
 		&.nav-short {
 			
-			padding: 0;
+			padding: 0 0 0 0.5em;
 			overflow: hidden;
 
 		}
@@ -34,7 +32,7 @@ header {
 			max-height: 200px;
 		}
 
-		@include transition(all 100ms);
+		// @include transition(all 100ms);
 
 
 	}	
@@ -91,17 +89,17 @@ nav {
 	max-height: 0;
 	overflow: hidden;
 
-	&.is-active {
-
-		max-height: 250px;
-		height: auto;
-		margin-top: 1.25em;
-
-	}
-
-	@include transition(all 500ms);
 	@media screen and (max-width: $medium) {
 
+		@include transition(all 500ms);
+
+		&.is-active {
+
+			max-height: 250px;
+			height: auto;
+			margin-top: 1.25em;
+			
+		}
 
 	}
 
@@ -109,12 +107,11 @@ nav {
 
 		font-size: 0.8em;
 
-
 		li {
 
-			float: left;
+			display: inline-block;
 
-		}			
+		}
 
 	}
 
@@ -129,6 +126,13 @@ nav {
 
 			max-height: 80px;
 			margin-top: 0;
+
+		}
+
+		li {
+
+			display: block;
+			float: left;
 
 		}
 
@@ -160,16 +164,19 @@ nav {
 
 	a {
 
-		padding: 0 1em;
+		padding: 0 1em 4px;
 		margin-bottom: 1em;
 		display: block;
-		border-bottom: 4px solid transparent;
+		border-bottom: 0 solid transparent;
 
 		&:hover {
 
+			padding: 0 1em;
 			border-bottom: 4px solid $light;
 
 		}
+
+		@include transition(all 500ms);
 
 		@media screen and (min-width: $medium) {
 
@@ -194,6 +201,7 @@ nav {
 
 		a {
 
+			padding: 0 1em;
 			border-bottom: 4px solid $dark3;
 
 		}
