@@ -133,7 +133,7 @@ body {
   line-height: 1.4em;
   color: #EFE6C2;
   background: #464B59;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), linear-gradient(75deg, rgba(150, 75, 123, 0.5), rgba(189, 26, 98, 0.75)), linear-gradient(75deg, rgba(0, 0, 255, 0.5) 25%, rgba(255, 255, 0, 0.75));
+  background-image: linear-gradient(55deg, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.15) 75%, rgba(0, 0, 0, 0) 95%), linear-gradient(65deg, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.1) 75%, rgba(0, 0, 0, 0) 95%), linear-gradient(75deg, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.05) 75%, rgba(0, 0, 0, 0) 95%), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), linear-gradient(75deg, rgba(150, 75, 123, 0.5), rgba(189, 26, 98, 0.75)), linear-gradient(75deg, rgba(0, 0, 255, 0.5) 25%, rgba(255, 255, 0, 0.75));
   text-align: left;
   -moz-transition: all 500ms;
   -o-transition: all 500ms;
@@ -154,52 +154,52 @@ body {
   }
 }
 
-/* line 36, ../sass/_base.scss */
+/* line 40, ../sass/_base.scss */
 a {
   text-decoration: none;
   color: #8B99AD;
 }
-/* line 41, ../sass/_base.scss */
+/* line 45, ../sass/_base.scss */
 a:hover {
   border-bottom: 2px solid #EFE6C2;
 }
 
-/* line 49, ../sass/_base.scss */
+/* line 53, ../sass/_base.scss */
 ul {
   list-style: disc;
 }
 
-/* line 55, ../sass/_base.scss */
+/* line 59, ../sass/_base.scss */
 h1, h2 {
   font-family: 'Playfair Display', serif;
 }
 
-/* line 61, ../sass/_base.scss */
+/* line 65, ../sass/_base.scss */
 h1 {
   font-size: 3em;
   line-height: 1.2em;
   margin-bottom: 0.8em;
 }
 
-/* line 69, ../sass/_base.scss */
+/* line 73, ../sass/_base.scss */
 h2 {
   font-size: 2em;
   line-height: 1.05em;
   margin-bottom: 0.35em;
 }
 @media screen and (min-width: 700px) {
-  /* line 69, ../sass/_base.scss */
+  /* line 73, ../sass/_base.scss */
   h2 {
     margin-top: 1.05em;
   }
 }
 
-/* line 83, ../sass/_base.scss */
+/* line 87, ../sass/_base.scss */
 p, ul {
   margin-bottom: 1.4em;
 }
 
-/* line 89, ../sass/_base.scss */
+/* line 93, ../sass/_base.scss */
 img {
   max-width: 100%;
   border: 5px solid #EFE6C2;
