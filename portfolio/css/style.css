@@ -209,15 +209,26 @@ p, ul {
 /* line 100, ../sass/_base.scss */
 img {
   max-width: 100%;
-  border: 5px solid #EFE6C2;
+}
+@media screen and (max-width: 1000px) {
+  /* line 100, ../sass/_base.scss */
+  img {
+    max-width: 128%;
+    position: relative;
+    left: -14%;
+    right: -14%;
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  }
 }
 
-/* line 107, ../sass/_base.scss */
+/* line 117, ../sass/_base.scss */
 strong {
   font-weight: bold;
 }
 
-/* line 111, ../sass/_base.scss */
+/* line 121, ../sass/_base.scss */
 .line {
   text-decoration: line-through;
 }
@@ -365,6 +376,11 @@ p.content {
 /* line 116, ../sass/_layout.scss */
 .portfolio h2 {
   font-size: 1.4em;
+}
+
+/* line 124, ../sass/_layout.scss */
+article {
+  margin-bottom: 5em;
 }
 
 /* line 1, ../sass/_btn.scss */

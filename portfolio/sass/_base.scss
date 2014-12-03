@@ -100,7 +100,17 @@ p, ul {
 img {
 
 	max-width: 100%;
-	border: 5px solid $light;
+
+	@media screen and (max-width: $medium) {
+
+		max-width: 128%;
+		position: relative;
+		left: -14%;
+		right: -14%;
+
+		@include box-shadow(0 0 20px rgba(0, 0, 0, 0.5));
+
+	}	
 
 }
 
