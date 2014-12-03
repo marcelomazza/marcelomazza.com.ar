@@ -25,8 +25,6 @@ section {
 
 	[class^="icon-"] {
 
-		margin-bottom: 3em;
-
 		&:before {
 
 			$s: 2em;
@@ -42,6 +40,12 @@ section {
 			border-radius: 100%;			
 
 		}
+
+		@media screen and (min-width: $small) {
+
+			float: right;
+			
+		}		
 
 	}
 
@@ -64,10 +68,25 @@ section {
 
 .side {
 
-	@media screen and (min-width: $small) {
+	margin: 0 5% 1em;
+
+	@media screen and (min-width: $medium) {
 
 		float: left;
 		width: 20%;
+		margin: 0;
+
+	}	
+
+}
+
+h2.side {
+
+	margin-top: 0;
+	
+	@media screen and (min-width: $medium) {
+
+		text-align: right;
 
 	}	
 
@@ -78,13 +97,17 @@ section {
 
 	margin: 0 5%;
 
-	@media screen and (min-width: $small) {
+	@media screen and (min-width: $medium) {
 
 		float: left;
 		width: 65%;
 
 	}
 
+}
+
+p.content {
+	margin-bottom: 4em;
 }
 
 

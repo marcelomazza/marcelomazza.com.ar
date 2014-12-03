@@ -288,11 +288,7 @@ section:last-child {
     padding-top: 10em;
   }
 }
-/* line 26, ../sass/_layout.scss */
-section [class^="icon-"] {
-  margin-bottom: 3em;
-}
-/* line 30, ../sass/_layout.scss */
+/* line 28, ../sass/_layout.scss */
 section [class^="icon-"]:before {
   display: inline-block;
   width: 2em;
@@ -304,8 +300,14 @@ section [class^="icon-"]:before {
   text-align: center;
   border-radius: 100%;
 }
+@media screen and (min-width: 700px) {
+  /* line 26, ../sass/_layout.scss */
+  section [class^="icon-"] {
+    float: right;
+  }
+}
 
-/* line 50, ../sass/_layout.scss */
+/* line 54, ../sass/_layout.scss */
 .profile-picture, .grid-span .grid-picture {
   width: 200px;
   margin-bottom: 1em;
@@ -313,33 +315,54 @@ section [class^="icon-"]:before {
   border-radius: 100%;
 }
 @media screen and (min-width: 700px) {
-  /* line 50, ../sass/_layout.scss */
+  /* line 54, ../sass/_layout.scss */
   .profile-picture, .grid-span .grid-picture {
     float: left;
   }
 }
 
-@media screen and (min-width: 700px) {
-  /* line 65, ../sass/_layout.scss */
+/* line 69, ../sass/_layout.scss */
+.side {
+  margin: 0 5% 1em;
+}
+@media screen and (min-width: 1000px) {
+  /* line 69, ../sass/_layout.scss */
   .side {
     float: left;
     width: 20%;
+    margin: 0;
   }
 }
 
-/* line 77, ../sass/_layout.scss */
+/* line 83, ../sass/_layout.scss */
+h2.side {
+  margin-top: 0;
+}
+@media screen and (min-width: 1000px) {
+  /* line 83, ../sass/_layout.scss */
+  h2.side {
+    text-align: right;
+  }
+}
+
+/* line 96, ../sass/_layout.scss */
 .content {
   margin: 0 5%;
 }
-@media screen and (min-width: 700px) {
-  /* line 77, ../sass/_layout.scss */
+@media screen and (min-width: 1000px) {
+  /* line 96, ../sass/_layout.scss */
   .content {
     float: left;
     width: 65%;
   }
 }
 
-/* line 93, ../sass/_layout.scss */
+/* line 109, ../sass/_layout.scss */
+p.content {
+  margin-bottom: 4em;
+}
+
+/* line 116, ../sass/_layout.scss */
 .portfolio h2 {
   font-size: 1.4em;
 }
@@ -497,7 +520,6 @@ nav {
   }
   /* line 125, ../sass/_header.scss */
   nav.is-active {
-    max-height: 80px;
     margin-top: 0;
   }
   /* line 132, ../sass/_header.scss */
