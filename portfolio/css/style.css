@@ -391,25 +391,38 @@ h2.side {
     margin-left: 5%;
   }
 }
+@media screen and (min-width: 1200px) {
+  /* line 124, ../sass/_layout.scss */
+  .content.content-full-width .btn {
+    float: right;
+  }
+}
 
-/* line 138, ../sass/_layout.scss */
+/* line 144, ../sass/_layout.scss */
 p.content {
   margin-bottom: 4em;
 }
 
-/* line 145, ../sass/_layout.scss */
+/* line 151, ../sass/_layout.scss */
 .portfolio h2 {
   font-size: 1.4em;
 }
 
-/* line 153, ../sass/_layout.scss */
+/* line 159, ../sass/_layout.scss */
 article {
   margin-bottom: 5em;
   *zoom: 1;
 }
-/* line 157, ../sass/_layout.scss */
+/* line 163, ../sass/_layout.scss */
 article h2 {
   margin-top: 0;
+}
+@media screen and (min-width: 1000px) {
+  /* line 169, ../sass/_layout.scss */
+  article p {
+    font-size: 0.75em;
+    line-height: 1.5em;
+  }
 }
 /* line 38, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/general/_clearfix.scss */
 article:after {

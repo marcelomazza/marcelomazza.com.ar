@@ -129,6 +129,12 @@ h2.side {
 
 			}
 
+			@media screen and (min-width: $large) {
+
+				float: right;
+
+			}			
+
 		}
 
 	}
@@ -157,6 +163,17 @@ article {
 	h2 {
 
 		margin-top: 0;
+
+	}
+
+	p {
+
+		@media screen and (min-width: $medium) {
+
+			font-size: 0.75em;
+			line-height: 1.5em;
+
+		}		
 
 	}
 
