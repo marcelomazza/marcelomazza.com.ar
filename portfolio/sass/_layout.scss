@@ -7,6 +7,7 @@ main {
 
 section {
 
+	padding-top: 10em;
 	margin-bottom: 33.6em;
 
 	@include pie-clearfix;
@@ -16,12 +17,6 @@ section {
 		margin-bottom: 10em;
 
 	}
-
-	@media screen and (min-width: $small) {
-
-		padding-top: 10em;
-
-	}	
 
 	[class^="icon-"] {
 
@@ -58,7 +53,7 @@ section {
 	border: none;
 	border-radius: 100%;
 
-	@media screen and (min-width: $small) {
+	@media screen and (min-width: $medium) {
 
 		float: left;
 
@@ -74,6 +69,11 @@ section {
 
 		float: left;
 		width: 20%;
+
+	}
+
+	@media screen and (min-width: $large) {
+
 		margin: 0;
 
 	}	
@@ -100,7 +100,36 @@ h2.side {
 	@media screen and (min-width: $medium) {
 
 		float: left;
-		width: 65%;
+		width: 55%;
+
+	}
+
+	&.content-full-width {
+
+		margin: 0;
+
+		@media screen and (min-width: $medium) {
+
+			width: 70%;
+
+		}
+
+		@media screen and (min-width: $large) {
+
+			margin: 0 0 0 5%;
+			width: 75%;
+
+		}
+
+		.btn {
+
+			@media screen and (max-width: $medium) {
+
+				margin-left: 5%;
+
+			}
+
+		}
 
 	}
 
@@ -122,5 +151,15 @@ p.content {
 }
 
 article {
+
 	margin-bottom: 5em;
+
+	h2 {
+
+		margin-top: 0;
+
+	}
+
+	@include pie-clearfix;
+
 }
