@@ -192,31 +192,26 @@ h2 {
   font-size: 2em;
   line-height: 1.05em;
   margin-bottom: 0.35em;
-}
-@media screen and (min-width: 700px) {
-  /* line 75, ../sass/_base.scss */
-  h2 {
-    margin-top: 1.05em;
-  }
+  margin-top: 1.05em;
 }
 
-/* line 89, ../sass/_base.scss */
+/* line 84, ../sass/_base.scss */
 p, ul {
   margin-bottom: 1.4em;
 }
 @media screen and (min-width: 700px) {
-  /* line 89, ../sass/_base.scss */
+  /* line 84, ../sass/_base.scss */
   p, ul {
     margin-bottom: 2em;
   }
 }
 
-/* line 101, ../sass/_base.scss */
+/* line 96, ../sass/_base.scss */
 img {
   max-width: 100%;
 }
 @media screen and (max-width: 1000px) {
-  /* line 101, ../sass/_base.scss */
+  /* line 96, ../sass/_base.scss */
   img {
     -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
@@ -224,12 +219,12 @@ img {
   }
 }
 
-/* line 118, ../sass/_base.scss */
+/* line 113, ../sass/_base.scss */
 strong {
   font-weight: bold;
 }
 
-/* line 122, ../sass/_base.scss */
+/* line 117, ../sass/_base.scss */
 .line {
   text-decoration: line-through;
 }
@@ -433,7 +428,10 @@ article:after {
 
 /* line 184, ../sass/_layout.scss */
 footer {
-  margin-top: 2em;
+  margin-top: 4em;
+  border-top: 1px solid #EFE6C2;
+  font-size: 0.75em;
+  line-height: 1.2em;
 }
 
 /* line 1, ../sass/_btn.scss */
