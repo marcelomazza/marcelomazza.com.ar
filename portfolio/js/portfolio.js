@@ -74,6 +74,29 @@ var portfolioUI = {
 		    
 		}
 
+	},
+
+	animateHeadline: function() {
+
+		setInterval(function() {
+
+			var $elementVisible = $('span.is-visible');
+		  
+		    if (!$elementVisible.is(':last-child')) {
+		      
+		      $elementVisible.removeClass('is-visible').addClass('is-hidden').next().addClass('is-visible').removeClass('is-hidden');
+
+		    } else {
+		      
+		       $elementVisible.removeClass('is-visible').addClass('is-hidden');
+
+			   $('.tagline').find('span:first-child').removeClass('is-hidden').addClass('is-visible');
+		      
+		    }
+		  
+		  
+		}, 2000);
+
 	}
 
 };
