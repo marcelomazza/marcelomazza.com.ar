@@ -1,17 +1,11 @@
 body {
 
 	position: relative;
-	font-family: 'Fauna One', serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
 	line-height: 1.4em;
-	color: $light;
-	background: $dark1;
-	background-image:
-
-		linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-		linear-gradient(75deg, rgba($gradientStart, 0.5), rgba($gradientEnd, 0.75)),
-		linear-gradient(75deg, rgba(blue, 0.5) 25%, rgba(yellow, 0.75));
-
+	color: $frg;
+	background: $bkg;
 
 	text-align: left;
 
@@ -42,11 +36,11 @@ body {
 a {
 
 	text-decoration: none;
-	color: $dark3;
+	color: $emphasis;
 
 	&:hover {
 
-		border-bottom: 2px solid $light;
+		border-bottom: 2px solid $emphasis;
 
 	}
 
@@ -60,7 +54,7 @@ ul {
 
 h1, h2 {
 
-	font-family: 'Playfair Display', serif;
+	font-weight: bold;
 
 }
 
@@ -96,17 +90,6 @@ p, ul {
 img {
 
 	max-width: 100%;
-
-	@media screen and (max-width: $medium) {
-
-		// max-width: 128%;
-		// position: relative;
-		// left: -14%;
-		// right: -14%;
-
-		@include box-shadow(0 0 20px rgba(0, 0, 0, 0.5));
-
-	}	
 
 }
 

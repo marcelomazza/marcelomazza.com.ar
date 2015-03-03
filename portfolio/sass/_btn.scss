@@ -6,29 +6,48 @@
 	position: relative;
 	top: 0;
 	font-weight: bold;
-	color: $dark1;
-	background: $light;
+	color: $emphasis;
+	border: 2px solid $emphasis;
 	border-radius: 3px;
 
-	@include box-shadow(0 5px 0 darken($light, 10) );
-	@include transition(all 100ms);
+	@include transition(color 200ms);
+
+	&:after {
+
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: $emphasis;
+		z-index: -1;
+
+		@include transform(scaleY(0));
+
+		@include transition(transform 200ms);
+
+	}
 
 	&:hover {
 
-		background: lighten($light, 15);
-		border: none;
+		color: $bkg;
+		border: 2px solid $emphasis;
 
-		@include box-shadow(0 5px 0 lighten(darken($light, 10), 15) );
+
+		&:after {
+
+			@include transform(scaleY(1));
+
+		}
 
 	}
 
 	&:active {
 
 		top: 5px;
-		color: darken($dark1, 10);
-		background: darken($light, 10);
-
-		@include box-shadow(none);
+		border-color: $emphasisDark;
+		background: $emphasisDark;
 
 	}
 
