@@ -7,8 +7,8 @@ header {
 	left: 0;
 	right: 0;
 	padding: 0.5em 1em;
-	background: rgba(darken($gradientEnd, 30), 0.85);
 	text-align: left;
+	background: rgba($bkg, 0.85);
 	z-index: 100;
 
 	@media screen and (min-width: $small) {
@@ -167,12 +167,14 @@ nav {
 		padding: 0 1em 4px;
 		margin-bottom: 1em;
 		display: block;
-		border-bottom: 0 solid transparent;
+		border-top: 4px solid transparent;
+		color: $neutral;
 
 		&:hover {
 
 			padding: 0 1em;
-			border-bottom: 4px solid $light;
+			border-top: 4px solid $emphasis;
+			border-bottom: none;
 
 		}
 
@@ -189,7 +191,7 @@ nav {
 
 			.nav-large & {
 
-				line-height: 4.2em;
+				line-height: 3.5em;
 
 			}
 
@@ -202,7 +204,7 @@ nav {
 		a {
 
 			padding: 0 1em;
-			border-bottom: 4px solid $dark3;
+			border-top: 4px solid $neutral;
 
 		}
 		
