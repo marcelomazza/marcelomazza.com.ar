@@ -21,10 +21,17 @@ module.exports = function(grunt) {
 					'css/style.css': 'scss/style.scss'
 				}
 			}
+		},
+		watch: {
+			src: {
+				files: ['scss/*.scss'],
+				tasks: ['default']
+			}
 		}
 	});
 
 	grunt.loadNpmTasks('grunt-autoprefixer');
+	grunt.loadNpmTasks('grunt-contrib-watch');
 
 	grunt.registerTask('default', ['sass']);
 
