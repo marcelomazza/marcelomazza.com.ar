@@ -52,9 +52,20 @@ section {
 	border: none;
 	border-radius: 100%;
 
+	backface-visibility: hidden;
+	
+	@include transform-style(preserve-3d);
+	@include transition(transform 1s);
+
 	@media screen and (min-width: $medium) {
 
 		float: right;
+
+	}
+
+	&:hover {
+
+		@include transform(rotateY(180deg));
 
 	}
 
