@@ -191,6 +191,7 @@ section {
       float: right; } }
 
 .profile-picture-wrap {
+  display: block;
   width: 200px;
   height: 200px;
   position: relative;
