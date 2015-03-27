@@ -45,8 +45,45 @@ section {
 
 }
 
-.profile-picture {
+.profile-picture-wrap {
+	width: 200px;
+	height: 200px;
+	position: relative;
 
+	@include transform-style(preserve-3d);
+
+	@media screen and (min-width: $medium) {
+
+		float: right;
+
+	}	
+
+	&:hover {
+
+		border-bottom: 0;
+
+		.profile-picture {
+
+			opacity: 0;
+			@include transform(scale(0.85) rotate(-90deg));
+
+		}
+
+		.profile-picture-back {
+
+			opacity: 1;
+			@include transform(scale(1) rotate(0));
+
+		}
+
+	}
+
+}
+
+.profile-picture,
+.profile-picture-back {
+
+	position: absolute;
 	width: 200px;
 	margin-bottom: 1em;
 	border: none;
@@ -54,26 +91,27 @@ section {
 
 	backface-visibility: hidden;
 	
-	@include transform-style(preserve-3d);
-	@include transition(transform 1s);
+	@include transition(transform 1s, opacity 500ms);
 
-	@media screen and (min-width: $medium) {
+}
 
-		float: right;
+.profile-picture-back {
+	height: 200px;
+	line-height: 200px;
+	color: #FFF;
+	background: $emphasis;
+	text-align: center;
+	opacity: 0;
 
-	}
-
-	&:hover {
-
-		@include transform(rotateY(180deg));
-
-	}
+	@include transform(scale(0) rotate(180deg));
 
 }
 
 .side {
 
 	margin: 0 5% 1em;
+
+	@include pie-clearfix;
 
 	@media screen and (min-width: $medium) {
 

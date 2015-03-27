@@ -190,33 +190,67 @@ section {
     section [class^="icon-"] {
       float: right; } }
 
-.profile-picture, .grid-span .grid-picture {
+.profile-picture-wrap {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d; }
+  @media screen and (min-width: 1000px) {
+    .profile-picture-wrap {
+      float: right; } }
+  .profile-picture-wrap:hover {
+    border-bottom: 0; }
+    .profile-picture-wrap:hover .profile-picture, .profile-picture-wrap:hover .grid-span .grid-picture, .grid-span .profile-picture-wrap:hover .grid-picture {
+      opacity: 0;
+      -webkit-transform: scale(0.85) rotate(-90deg);
+      -moz-transform: scale(0.85) rotate(-90deg);
+      -ms-transform: scale(0.85) rotate(-90deg);
+      -o-transform: scale(0.85) rotate(-90deg);
+      transform: scale(0.85) rotate(-90deg); }
+    .profile-picture-wrap:hover .profile-picture-back {
+      opacity: 1;
+      -webkit-transform: scale(1) rotate(0);
+      -moz-transform: scale(1) rotate(0);
+      -ms-transform: scale(1) rotate(0);
+      -o-transform: scale(1) rotate(0);
+      transform: scale(1) rotate(0); }
+
+.profile-picture, .grid-span .grid-picture, .profile-picture-back {
+  position: absolute;
   width: 200px;
   margin-bottom: 1em;
   border: none;
   border-radius: 100%;
   backface-visibility: hidden;
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
-  -o-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  -webkit-transition: -webkit-transform 1s;
-  -moz-transition: -moz-transform 1s;
-  -o-transition: -o-transform 1s;
-  transition: transform 1s; }
-  @media screen and (min-width: 1000px) {
-    .profile-picture, .grid-span .grid-picture {
-      float: right; } }
-  .profile-picture:hover, .grid-span .grid-picture:hover {
-    -webkit-transform: rotateY(180deg);
-    -moz-transform: rotateY(180deg);
-    -ms-transform: rotateY(180deg);
-    -o-transform: rotateY(180deg);
-    transform: rotateY(180deg); }
+  -webkit-transition: -webkit-transform 1s, opacity 500ms;
+  -moz-transition: -moz-transform 1s, opacity 500ms;
+  -o-transition: -o-transform 1s, opacity 500ms;
+  transition: transform 1s, opacity 500ms; }
+
+.profile-picture-back {
+  height: 200px;
+  line-height: 200px;
+  color: #FFF;
+  background: #BD1A62;
+  text-align: center;
+  opacity: 0;
+  -webkit-transform: scale(0) rotate(180deg);
+  -moz-transform: scale(0) rotate(180deg);
+  -ms-transform: scale(0) rotate(180deg);
+  -o-transform: scale(0) rotate(180deg);
+  transform: scale(0) rotate(180deg); }
 
 .side {
-  margin: 0 5% 1em; }
+  margin: 0 5% 1em;
+  *zoom: 1; }
+  .side:after {
+    content: "";
+    display: table;
+    clear: both; }
   @media screen and (min-width: 1000px) {
     .side {
       float: left;
