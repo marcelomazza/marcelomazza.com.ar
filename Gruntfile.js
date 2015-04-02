@@ -11,7 +11,18 @@ module.exports = function(grunt) {
 		      src: 'css/*.css',
 		      dest: 'css/'
 		    }
-		},    
+		},
+		responsive_images: {
+			myTask: {
+				options: {},
+				files: [{
+					expand: true,
+					src: ['**.{jpg,gif,png}'],
+					cwd: 'img/orig/',
+					dest: 'img/'
+				}]
+			}
+		},
 		sass: {
 			options: {
 				sourceMap: true
@@ -32,6 +43,7 @@ module.exports = function(grunt) {
 
 	grunt.loadNpmTasks('grunt-autoprefixer');
 	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-responsive-images');
 
 	grunt.registerTask('default', ['sass']);
 
