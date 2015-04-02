@@ -506,11 +506,13 @@ nav {
     .tagline {
       font-size: 8vw; } }
   .tagline span {
-    display: inline-block;
+    display: none;
     position: absolute;
     white-space: nowrap;
     left: 0;
     top: 0; }
+    .tagline span.is-visible, .tagline span.is-prepared {
+      display: inline-block; }
     .tagline span.is-visible {
       position: relative; }
   .tagline i, .tagline em {

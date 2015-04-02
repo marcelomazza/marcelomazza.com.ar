@@ -27,6 +27,7 @@ jQuery(document).ready(function($){
 			}
 		    var newLetters = letters.join('');
 		    word.html(newLetters);
+		    $(this).addClass('is-prepared');
 		});
 	}
 

@@ -13,11 +13,18 @@
 	@include perspective(300px);
 
 	span {
-		display: inline-block;
+		display: none;
 		position: absolute;
 		white-space: nowrap;
 		left: 0;
 		top: 0;
+
+		&.is-visible,
+		&.is-prepared {
+
+			display: inline-block;
+
+		}
 
 		&.is-visible {
 
