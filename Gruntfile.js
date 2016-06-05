@@ -4,6 +4,16 @@ module.exports = function(grunt) {
 	require('load-grunt-tasks')(grunt); // npm install --save-dev load-grunt-tasks
 
 	grunt.initConfig({
+		assemble: {
+			project: {
+				options: {
+					partials: 'partials/*.hbs'
+				},
+				files: {
+					'index.html': ['pages/index.hbs']
+				}
+			}
+		},
 		autoprefixer: {
 		    multiple_files: {
 		      expand: true,

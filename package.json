@@ -1,13 +1,17 @@
 {
+  "name": "marcelomazzacomar",
+  "version": "1.0.0",
   "engines": {
     "node": ">= 0.10.0"
   },
   "devDependencies": {
+    "assemble-handlebars": "^0.3.0",
     "grunt": "~0.4.5",
+    "grunt-assemble": "^0.4.0",
     "grunt-autoprefixer": "^2.2.0",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-responsive-images": "^0.1.6",
-    "grunt-sass": "^0.18.1",
+    "grunt-sass": "^1.2.0",
     "load-grunt-tasks": "^3.1.0"
   }
 }
