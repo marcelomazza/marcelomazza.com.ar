@@ -45,9 +45,19 @@ module.exports = function(grunt) {
       }
     },
     watch: {
-      src: {
+      html: {
+        files: 'index.html',
+        options: {
+          livereload: true
+        }
+      },
+      sass: {
         files: ['scss/*.scss'],
-        tasks: ['default']
+        tasks: ['sass']
+      },
+      templates: {
+        files: ['pages/*.hbs'],
+        tasks: ['assemble']
       }
     }
   });
@@ -56,6 +66,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-responsive-images');
 
-  grunt.registerTask('default', ['sass']);
+  grunt.registerTask('default', ['sass', 'assemble']);
 
 };
