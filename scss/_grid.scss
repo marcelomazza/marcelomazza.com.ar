@@ -1,47 +1,47 @@
 .grid {
 
-	@include pie-clearfix;
+  @include pie-clearfix;
 
-	.grid-span:nth-child(4n) {
+  .grid-span:nth-child(4n) {
 
-		clear: left;
+    clear: left;
 
-	}	
+  }
 
 }
 
 .grid-span {
 
-	margin-bottom: 6em;
+  margin-bottom: 6em;
 
-	[class^="icon-"] {
+  [class^="icon-"] {
 
-		margin-top: 3em;
-		margin-bottom: 0;
+    margin-top: 3em;
+    margin-bottom: 0;
 
-	}
+  }
 
-	.grid-picture {
+  .grid-picture {
 
-		@extend .profile-picture;
+    @extend .profile-picture;
 
-		width: 300px;
-		height: 300px;
-		
-	}	
+    width: 300px;
+    height: 300px;
+
+  }
 
 }
 
 
 @media screen and (min-width: $small) {
 
-	.grid-span {
+  .grid-span {
 
-		width: 30%;
-		padding: 0 1.6%;
-		float: left;
-		font-size: 0.8em;
+    width: 30%;
+    padding: 0 1.6%;
+    float: left;
+    font-size: 0.8em;
 
-	}
+  }
 
 }

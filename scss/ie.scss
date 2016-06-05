@@ -1,139 +1,139 @@
 body {
 
-	padding: 6.2em 2.1em;
-	font-size: 20px;
+  padding: 6.2em 2.1em;
+  font-size: 20px;
 
 }
 
 h2 {
 
-	margin-top: 1.05em;
+  margin-top: 1.05em;
 
 }
 
 .grid-span {
 
-	width: 30%;
-	padding: 0 1.6%;
-	float: left;
-	font-size: 0.8em;
+  width: 30%;
+  padding: 0 1.6%;
+  float: left;
+  font-size: 0.8em;
 
 }
 
 
-	.site-title {
+.site-title {
 
-		text-align: center;
+  text-align: center;
 
-	}
-
-
-	header {
-
-		padding: 1.5em;
-
-		.site-title {
-
-			width: auto;
-
-		}
-
-		nav {
-			
-			font-size: 0.8em;
-
-			ul {
-
-				margin-bottom: 0;
-				text-align: center;
-
-			}
-
-		}
-
-	}
-
-	.nav-toggle {
-		
-		top: 0.8em;
-		right: 0.8em;
-
-	}
+}
 
 
-	header {
+header {
 
-		.site-title {
+  padding: 1.5em;
 
-			padding: 0.5em 0em;
-			float: left;
+  .site-title {
 
-		}
+    width: auto;
 
-		nav {
-			
-			display: block;
-			float: right;
-			margin-top: 0;
-			max-height: 100px;
+  }
 
-			&.is-active {
+  nav {
 
-				max-height: 80px;
-				margin-top: 0;
+    font-size: 0.8em;
 
-			}	
+    ul {
 
-			li {
+      margin-bottom: 0;
+      text-align: center;
 
-				display: inline-block;
-				margin: 0 0 0 2em;
+    }
 
+  }
 
-			}
+}
 
-			.btn {
+.nav-toggle {
 
-				margin: 0;
+  top: 0.8em;
+  right: 0.8em;
 
-			}
-
-		}
-
-	}
-
-	.nav-toggle {
-		
-		display: none;
-
-	}
+}
 
 
-	header {
+header {
 
-		.site-title {
+  .site-title {
 
-			font-size: 1.5em;
-			padding: 0.5em 1.5em;
+    padding: 0.5em 0em;
+    float: left;
 
-		}
+  }
 
-		nav {
+  nav {
 
-			font-size: 1em;
+    display: block;
+    float: right;
+    margin-top: 0;
+    max-height: 100px;
 
-			&.is-active {
+    &.is-active {
 
-				margin-top: 0;
+      max-height: 80px;
+      margin-top: 0;
 
-			}
+    }
 
-			.btn {
+    li {
 
-				margin: 0.6em 0 0;
+      display: inline-block;
+      margin: 0 0 0 2em;
 
-			}
 
-		}
+    }
 
-	}
+    .btn {
+
+      margin: 0;
+
+    }
+
+  }
+
+}
+
+.nav-toggle {
+
+  display: none;
+
+}
+
+
+header {
+
+  .site-title {
+
+    font-size: 1.5em;
+    padding: 0.5em 1.5em;
+
+  }
+
+  nav {
+
+    font-size: 1em;
+
+    &.is-active {
+
+      margin-top: 0;
+
+    }
+
+    .btn {
+
+      margin: 0.6em 0 0;
+
+    }
+
+  }
+
+}

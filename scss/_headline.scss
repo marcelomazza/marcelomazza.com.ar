@@ -1,75 +1,75 @@
 .tagline {
-	
-	display: inline-block;
-	position: relative;
-	text-align: left;
 
-	@media screen and (max-width: $small) {
+  display: inline-block;
+  position: relative;
+  text-align: left;
 
-		font-size: 8vw;
+  @media screen and (max-width: $small) {
 
-	}  
+    font-size: 8vw;
 
-	@include perspective(300px);
+  }
 
-	span {
-		display: none;
-		position: absolute;
-		white-space: nowrap;
-		left: 0;
-		top: 0;
+  @include perspective(300px);
 
-		&.is-visible,
-		&.is-prepared {
+  span {
+    display: none;
+    position: absolute;
+    white-space: nowrap;
+    left: 0;
+    top: 0;
 
-			display: inline-block;
+    &.is-visible,
+    &.is-prepared {
 
-		}
+      display: inline-block;
 
-		&.is-visible {
+    }
 
-			position: relative;
+    &.is-visible {
 
-		}
+      position: relative;
 
-	}
+    }
 
-  	i, em {
+  }
 
-		display: inline-block;
-		-webkit-backface-visibility: hidden;
-		backface-visibility: hidden;
+  i, em {
 
-  	}
+    display: inline-block;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 
-	i {
+  }
 
-		@include transform-style(preserve-3d);
-		@include transform(translateZ(-20px) rotateX(90deg));
-		
-		&.in {
+  i {
 
-			@include animation(rotate-in 0.4s forwards);
+    @include transform-style(preserve-3d);
+    @include transform(translateZ(-20px) rotateX(90deg));
 
-		}
+    &.in {
 
-		&.out {
+      @include animation(rotate-in 0.4s forwards);
 
-			@include animation(rotate-out 0.4s forwards);
+    }
 
-		}
-		
-	}
+    &.out {
 
-	.is-visible i {
-		opacity: 1;
-	}
+      @include animation(rotate-out 0.4s forwards);
 
-	em {
+    }
 
-		@include transform(translateZ(20px));
+  }
 
-	}
+  .is-visible i {
+    opacity: 1;
+  }
+
+  em {
+
+    @include transform(translateZ(20px));
+
+  }
 
 }
 

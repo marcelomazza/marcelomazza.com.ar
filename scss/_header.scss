@@ -1,271 +1,271 @@
 header {
 
-	margin-bottom: 2em;
+  margin-bottom: 2em;
 
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	padding: 0.5em 1em;
-	text-align: left;
-	background: rgba($bkg, 0.85);
-	z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0.5em 1em;
+  text-align: left;
+  background: rgba($bkg, 0.85);
+  z-index: 100;
 
-	@media screen and (min-width: $small) {
+  @media screen and (min-width: $small) {
 
-		padding: 0.85em;
+    padding: 0.85em;
 
-	}
+  }
 
-	@media screen and (min-width: $medium) {
+  @media screen and (min-width: $medium) {
 
-		padding: 0 0.5em;
+    padding: 0 0.5em;
 
-		&.nav-short {
-			
-			padding: 0 0 0 0.5em;
-			overflow: hidden;
+    &.nav-short {
 
-		}
+      padding: 0 0 0 0.5em;
+      overflow: hidden;
 
-		&.nav-large {
-			max-height: 200px;
-		}
+    }
 
-		// @include transition(all 100ms);
+    &.nav-large {
+      max-height: 200px;
+    }
+
+    // @include transition(all 100ms);
 
 
-	}	
+  }
 
 }
 
 .site-title {
 
-	margin-bottom: 0;
-	width: 90%;
-	font-size: 1.2em;
-	padding: 0.2em 0;
+  margin-bottom: 0;
+  width: 90%;
+  font-size: 1.2em;
+  padding: 0.2em 0;
 
-	@include transition(all $transitionDefault);
+  @include transition(all $transitionDefault);
 
-	@media screen and (min-width: $small) and (max-width: $medium) {
+  @media screen and (min-width: $small) and (max-width: $medium) {
 
-		text-align: center;
+    text-align: center;
 
-	}
+  }
 
-	@media screen and (min-width: $small) {
+  @media screen and (min-width: $small) {
 
-		width: auto;
+    width: auto;
 
-	}		
+  }
 
-	@media screen and (min-width: $medium) {
+  @media screen and (min-width: $medium) {
 
-		float: left;
-		
-		.nav-large & {
-			line-height: 2.5em;
-		}
+    float: left;
 
-	}
+    .nav-large & {
+      line-height: 2.5em;
+    }
 
-	@media screen and (min-width: $large) {
+  }
 
-		.nav-large & {
+  @media screen and (min-width: $large) {
 
-			font-size: 1.5em;
-			line-height: 1.8em;
-			padding: 0.5em 1.5em;
+    .nav-large & {
 
-		}
+      font-size: 1.5em;
+      line-height: 1.8em;
+      padding: 0.5em 1.5em;
 
-	}	
+    }
+
+  }
 
 }
 
 nav {
 
-	max-height: 0;
-	overflow: hidden;
+  max-height: 0;
+  overflow: hidden;
 
-	@media screen and (max-width: $medium) {
+  @media screen and (max-width: $medium) {
 
-		@include transition(all 500ms);
+    @include transition(all 500ms);
 
-		&.is-active {
+    &.is-active {
 
-			max-height: 250px;
-			height: auto;
-			margin-top: 1.25em;
-			
-		}
+      max-height: 250px;
+      height: auto;
+      margin-top: 1.25em;
 
-	}
+    }
 
-	@media screen and (min-width: $small) {
+  }
 
-		font-size: 0.8em;
+  @media screen and (min-width: $small) {
 
-		li {
+    font-size: 0.8em;
 
-			display: inline-block;
+    li {
 
-		}
+      display: inline-block;
 
-	}
+    }
 
-	@media screen and (min-width: $medium) {
+  }
 
-		display: block;
-		float: right;
-		margin-top: 0;
-		max-height: 100px;
+  @media screen and (min-width: $medium) {
 
-		&.is-active {
+    display: block;
+    float: right;
+    margin-top: 0;
+    max-height: 100px;
 
-			// max-height: 80px;
-			margin-top: 0;
+    &.is-active {
 
-		}
+      // max-height: 80px;
+      margin-top: 0;
 
-		li {
+    }
 
-			display: block;
-			float: left;
+    li {
 
-		}
+      display: block;
+      float: left;
 
-	}
+    }
 
-	@media screen and (min-width: $large) {
+  }
 
-		.nav-large & {
+  @media screen and (min-width: $large) {
 
-			font-size: 1em;
+    .nav-large & {
 
-		}
+      font-size: 1em;
 
-		&.is-active {
+    }
 
-			margin-top: 0;
+    &.is-active {
 
-		}
+      margin-top: 0;
 
-		.btn {
+    }
 
-			margin: 0.6em 0 0;
+    .btn {
 
-		}
+      margin: 0.6em 0 0;
 
+    }
 
-	}	
 
+  }
 
-	a {
 
-		padding: 0 1em 4px;
-		margin-bottom: 1em;
-		display: block;
-		border-top: 4px solid transparent;
-		color: $neutral;
+  a {
 
-		&:hover {
+    padding: 0 1em 4px;
+    margin-bottom: 1em;
+    display: block;
+    border-top: 4px solid transparent;
+    color: $neutral;
 
-			padding: 0 1em;
-			border-top: 4px solid $emphasis;
-			border-bottom: none;
+    &:hover {
 
-		}
+      padding: 0 1em;
+      border-top: 4px solid $emphasis;
+      border-bottom: none;
 
-		@include transition(all 500ms);
+    }
 
-		@media screen and (min-width: $medium) {
+    @include transition(all 500ms);
 
-			margin-bottom: 0;
-			line-height: 2.5em;
+    @media screen and (min-width: $medium) {
 
-		}
+      margin-bottom: 0;
+      line-height: 2.5em;
 
-		@media screen and (min-width: $medium) {
+    }
 
-			.nav-large & {
+    @media screen and (min-width: $medium) {
 
-				line-height: 3.5em;
+      .nav-large & {
 
-			}
+        line-height: 3.5em;
 
-		}
+      }
 
-	}
+    }
 
-	.active {
+  }
 
-		a {
+  .active {
 
-			padding: 0 1em;
-			border-top: 4px solid $neutral;
+    a {
 
-		}
-		
-	}
+      padding: 0 1em;
+      border-top: 4px solid $neutral;
 
-	ul {
+    }
 
-		list-style: none;
+  }
 
-		@media screen and (min-width: $small) {
+  ul {
 
-			margin-bottom: 0;
-			text-align: center;
+    list-style: none;
 
-		}
+    @media screen and (min-width: $small) {
 
-	}
+      margin-bottom: 0;
+      text-align: center;
 
+    }
 
-	.btn {
+  }
 
-		margin: 1em 0 0;
-		padding: 0.5em 1.5em;
-		font-size: 0.8em;
-		border-bottom: none;
 
-		@media screen and (min-width: $medium) {
+  .btn {
 
-			margin: 0;
+    margin: 1em 0 0;
+    padding: 0.5em 1.5em;
+    font-size: 0.8em;
+    border-bottom: none;
 
-		}	
+    @media screen and (min-width: $medium) {
 
-	}
+      margin: 0;
+
+    }
+
+  }
 
 
 }
 
 .nav-toggle {
 
-	position: absolute;
-	top: 0.5em;
-	right: 0.5em;
-	font-size: 1.5em;
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  font-size: 1.5em;
 
-	&:hover {
+  &:hover {
 
-		border: none;
+    border: none;
 
-	}	
+  }
 
-	@media screen and (min-width: $small) {
+  @media screen and (min-width: $small) {
 
-		top: 0.8em;
-		right: 0.8em;
+    top: 0.8em;
+    right: 0.8em;
 
-	}
+  }
 
-	@media screen and (min-width: $medium) {
+  @media screen and (min-width: $medium) {
 
-		display: none;
+    display: none;
 
-	}	
+  }
 
 }
