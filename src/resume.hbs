@@ -1,0 +1,150 @@
+---
+title: Resume
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{{ author }} | Resume </title>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800' rel='stylesheet' type='text/css'>
+  <link href='../css/resume.css' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+
+  <main id="main">
+
+    <section>
+
+      <div class="side">
+
+        <img class="profile-picture" src="../img/orig/profile-picture.jpg">
+
+      </div>
+
+      <div class="content">
+
+        <h1>{{ author }}.</h1>
+        <h2>Front-end Developer &amp; Web Designer from Buenos Aires, Argentina</h2>
+
+        <p>{{ email }} | http://marcelomazza.com.ar | http://linkedin.com/in/marcelomazza</p>
+
+      </div>
+
+    </section>
+
+    <section>
+
+      <div class="side">
+
+        <div class="icon-flow-children"></div>
+
+      </div>
+
+      <div class="content">
+
+        <h1>Work Experience</h1>
+
+        {{#each work as | data name |}}
+          {{#if data.resume }}
+            <h2>
+              {{#if data.startDate}}
+                {{ data.startDate }} to {{ data.endDate }} - 
+              {{/if }}
+              {{ data.title }}
+            </h2>
+            {{{ data.description }}}
+          {{/if }}
+        {{/each}}
+
+      </div>
+
+    </section>
+
+    <section>
+
+      <div class="side">
+
+        <div class="icon-flow-children"></div>
+
+      </div>
+
+      <div class="content">
+
+        <h1>Skills</h1>
+
+        <ul class="skills">
+          <li>HTML5</li>
+          <li>CSS3 &amp; preprocessors (LESS, SASS)</li>
+          <li>JavaScript</li>
+          <li>jQuery</li>
+          <li>OOCSS, BEM, SMACSS</li>
+          <li>Web &amp; UI Design</li>
+          <li>Front-end Development</li>
+          <li>Versioning Systems (GIT, SVN)</li>
+          <li>Responsive Web Design</li>
+          <li>A/B Testing</li>
+          <li>Web &amp; Business Data Analysis</li>
+          <li>Usability</li>
+          <li>User Testing</li>
+          <li>Wordpress</li>
+          <li>PHP</li>
+          <li>Adobe Creative Suite</li>
+        </ul>
+
+      </div>
+
+    </section>
+
+    <section>
+
+      <div class="side">
+
+        <div class="icon-flow-children"></div>
+
+      </div>
+
+      <div class="content">
+
+        <h1>Education</h1>
+
+        <h2>Studied Graphic Design and Motion Design at Universidad de Buenos Aires</h2>
+
+      </div>
+
+    </section>
+
+    <section id="extras">
+
+      <div class="side">
+
+        <div class="icon-spanner"></div>
+
+      </div>
+
+
+      <div class="content">
+
+        <h1>Extras</h1>
+
+        {{#each extras }}
+          <h2>{{ title }}</h2>
+          <p>{{{ text }}}</p>
+        {{/each}}
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!--[if gte IE 8]><!-->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/portfolio.js"></script>
+  <!--<![endif]-->
+
+</body>
+</html>

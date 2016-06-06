@@ -7,11 +7,12 @@ module.exports = function(grunt) {
     assemble: {
       project: {
         options: {
-          partials: 'partials/*.hbs'
+          data: 'src/data/*.json'
         },
-        files: {
-          'index.html': ['pages/index.hbs']
-        }
+        files: [
+          { 'index.html': 'src/index.hbs' },
+          { 'resume.html': 'src/resume.hbs' }
+        ]
       }
     },
     autoprefixer: {
@@ -46,7 +47,7 @@ module.exports = function(grunt) {
     },
     watch: {
       html: {
-        files: 'index.html',
+        files: '*.html',
         options: {
           livereload: true
         }
@@ -55,8 +56,8 @@ module.exports = function(grunt) {
         files: ['scss/*.scss'],
         tasks: ['sass']
       },
-      templates: {
-        files: ['pages/*.hbs'],
+      assemble: {
+        files: ['*.hbs', '**/*.hbs', 'src/data/*.json'],
         tasks: ['assemble']
       }
     }

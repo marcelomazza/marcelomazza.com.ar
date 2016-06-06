@@ -1,0 +1,22 @@
+{
+  "author": "Marcelo Mazza",
+  "email": "ux@marcelomazza.com.ar",
+  "extras": {
+    "toolbelt": {
+      "title": "My Tool Belt",
+      "text": "Fireworks (RIP). Sublime Text 2 + Emmet (ex Zen Coding). LESS. SASS + Compass. Grunt (with LiveReload!). Bower. Yeoman. Modernizr. Git & Github."
+    },
+    "updated": {
+      "title": "I keep updated with",
+      "text": "Fireworks (RIP). Sublime Text 2 + Emmet (ex Zen Coding). LESS. SASS + Compass. Grunt (with LiveReload!). Bower. Yeoman. Modernizr. Git & Github."
+    },
+    "hobbies": {
+      "title": "Hobbies",
+      "text": "My work is my hobbie! (I swear I'm a happy guy :P). I keep reading and trying new UX things. I love reading. I love music. I love movies. I love traveling and knowing new places."
+    },
+    "contact": {
+      "title": "Contact me",
+      "text": "<a class=\"btn\" href=\"mailto:ux@marcelomazza.com.ar\">ux@marcelomazza.com.ar</a>"
+    }
+  }
+}
