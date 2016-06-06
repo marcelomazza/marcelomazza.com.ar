@@ -32,9 +32,6 @@ header {
       max-height: 200px;
     }
 
-    // @include transition(all 100ms);
-
-
   }
 
 }
@@ -46,7 +43,7 @@ header {
   font-size: 1.2em;
   padding: 0.2em 0;
 
-  @include transition(all $transitionDefault);
+  transition: all $transitionDefault;
 
   @media screen and (min-width: $small) and (max-width: $medium) {
 
@@ -91,7 +88,7 @@ nav {
 
   @media screen and (max-width: $medium) {
 
-    @include transition(all 500ms);
+    transition: all 500ms;
 
     &.is-active {
 
@@ -178,7 +175,7 @@ nav {
 
     }
 
-    @include transition(all 500ms);
+    transition: all 500ms;
 
     @media screen and (min-width: $medium) {
 

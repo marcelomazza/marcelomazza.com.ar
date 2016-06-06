@@ -15,12 +15,14 @@ module.exports = function(grunt) {
         ]
       }
     },
-    autoprefixer: {
-      multiple_files: {
-        expand: true,
-        flatten: true,
-        src: 'css/*.css',
-        dest: 'css/'
+    postcss: {
+      options: {
+        processors: [
+          require('autoprefixer')({browsers: 'last 2 versions'})
+        ]
+      },
+      dist: {
+        src: 'css/*.css'
       }
     },
     responsive_images: {
@@ -47,14 +49,14 @@ module.exports = function(grunt) {
     },
     watch: {
       html: {
-        files: '*.html',
+        files: ['*.html', 'css/*.css'],
         options: {
           livereload: true
         }
       },
       sass: {
         files: ['scss/*.scss'],
-        tasks: ['sass']
+        tasks: ['sass', 'postcss']
       },
       assemble: {
         files: ['*.hbs', '**/*.hbs', 'src/data/*.json'],
@@ -67,6 +69,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-responsive-images');
 
-  grunt.registerTask('default', ['sass', 'assemble']);
+  grunt.registerTask('default', ['sass', 'postcss', 'assemble']);
 
 };

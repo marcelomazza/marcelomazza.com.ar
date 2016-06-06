@@ -10,7 +10,7 @@
   border: 2px solid $emphasis;
   border-radius: 3px;
 
-  @include transition(color 200ms);
+  transition: color 200ms;
 
   &:after {
 
@@ -23,9 +23,9 @@
     background: $emphasis;
     z-index: -1;
 
-    @include transform(scaleY(0));
+    transform: scaleY(0);
 
-    @include transition(transform 200ms);
+    transition: transform 200ms;
 
   }
 
@@ -37,7 +37,7 @@
 
     &:after {
 
-      @include transform(scaleY(1));
+      transform: scaleY(1);
 
     }
 

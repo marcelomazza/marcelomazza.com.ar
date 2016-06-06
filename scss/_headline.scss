@@ -10,8 +10,6 @@
 
   }
 
-  @include perspective(300px);
-
   span {
     display: none;
     position: absolute;
@@ -44,18 +42,18 @@
 
   i {
 
-    @include transform-style(preserve-3d);
-    @include transform(translateZ(-20px) rotateX(90deg));
+    transform-style: preserve-3d;
+    transform: translateZ(-20px) rotateX(90deg);
 
     &.in {
 
-      @include animation(rotate-in 0.4s forwards);
+      animation: rotate-in 0.4s forwards;
 
     }
 
     &.out {
 
-      @include animation(rotate-out 0.4s forwards);
+      animation: rotate-out 0.4s forwards;
 
     }
 
@@ -67,47 +65,47 @@
 
   em {
 
-    @include transform(translateZ(20px));
+    transform: translateZ(20px);
 
   }
 
 }
 
-@include keyframes(rotate-in) {
+@keyframes rotate-in {
 
   0% {
     opacity: 0;
-    @include transform(translateZ(-20px) rotateX(90deg));
+    transform: translateZ(-20px) rotateX(90deg);
   }
 
   60% {
     opacity: 1;
-    @include transform(translateZ(-20px) rotateX(-10deg));
+    transform: translateZ(-20px) rotateX(-10deg);
   }
 
   100% {
     opacity: 1;
-    @include transform(translateZ(-20px) rotateX(0deg));
+    transform: translateZ(-20px) rotateX(0deg);
   }
 
 }
 
 
-@include keyframes(rotate-out) {
+@keyframes rotate-out {
 
   0% {
     opacity: 1;
-    @include transform(translateZ(-20px) rotateX(0));
+    transform: translateZ(-20px) rotateX(0);
   }
 
   60% {
     opacity: 1;
-    @include transform(translateZ(-20px) rotateX(-100deg));
+    transform: translateZ(-20px) rotateX(-100deg);
   }
 
   100% {
     opacity: 1;
-    @include transform(translateZ(-20px) rotateX(-90deg));
+    transform: translateZ(-20px) rotateX(-90deg);
   }
 
 }
