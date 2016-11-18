@@ -62,10 +62,6 @@ module.exports = function(grunt) {
       assemble: {
         files: ['*.hbs', '**/*.hbs', 'src/data/*.json'],
         tasks: ['assemble']
-      },
-      html_pdf: {
-        files: ['css/resume.css', 'resume.html'],
-        tasks: ['html_pdf']
       }
     },
     html_pdf: {
