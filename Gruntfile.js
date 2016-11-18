@@ -42,9 +42,10 @@ module.exports = function(grunt) {
         outputStyle: 'compressed'
       },
       dist: {
-        files: {
-          'css/style.css': 'scss/style.scss'
-        }
+        files: [
+          { 'css/style.css': 'scss/style.scss' },
+          { 'css/resume.css': 'scss/resume.scss' }
+        ]
       }
     },
     watch: {
@@ -61,14 +62,31 @@ module.exports = function(grunt) {
       assemble: {
         files: ['*.hbs', '**/*.hbs', 'src/data/*.json'],
         tasks: ['assemble']
+      },
+      html_pdf: {
+        files: ['css/resume.css', 'resume.html'],
+        tasks: ['html_pdf']
       }
-    }
+    },
+    html_pdf: {
+      dist: {
+        options: {
+          format: 'A4',
+          orientation: 'portrait',
+          quality: '75',
+          base: 'http://localhost:88/marcelomazza.com.ar/'
+        },
+        files: {
+          'Marcelo-Mazza-Resume.pdf': ['resume.html',],
+        },
+      }
+    },
   });
 
   grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-responsive-images');
 
-  grunt.registerTask('default', ['sass', 'postcss', 'assemble']);
+  grunt.registerTask('default', ['sass', 'postcss', 'assemble', 'html_pdf']);
 
 };
