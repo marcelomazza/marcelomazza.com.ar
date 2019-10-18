@@ -9,7 +9,7 @@ class NerdStuff extends React.Component {
     const siteTitle = data.site.siteMetadata.title
 
     return (
-      <Layout location={this.props.location} siteTitle={siteTitle} pageTitle={'Nerd stuff'}>
+      <Layout siteTitle={siteTitle} pageTitle={'Nerd stuff'}>
         Nerd stuff page
       </Layout>
     )

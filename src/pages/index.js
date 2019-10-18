@@ -10,7 +10,7 @@ class Index extends React.Component {
     const siteTitle = data.site.siteMetadata.title
 
     return (
-      <Layout location={this.props.location} siteTitle={siteTitle} pageTitle={'Marcelo Mazza - UX Designer'}>
+      <Layout siteTitle={siteTitle} pageTitle={'Marcelo Mazza - UX Designer'}>
         <SEO title="All posts" />
         <p>Hola! I'm Marcelo Mazza, from Buenos Aires, Argentina. For the last 10 years I’ve been working in User Experience.</p>
         <p>I’m a problem solver, data-oriented kind of guy, and I love crafting solutions from ground-zero; wireframing, iterating, testing & coding each piece of the UX puzzle.</p>

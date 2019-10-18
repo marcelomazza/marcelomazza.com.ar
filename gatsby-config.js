@@ -7,6 +7,24 @@ module.exports = {
     social: {
       twitter: `marcelomazza`,
     },
+    menuLinks: [
+      {
+        name: 'Home',
+        link: '/'
+      },
+      {
+        name: 'Philosophy',
+        link: '/philosophy'
+      },
+      {
+        name: 'Work',
+        link: '/work'
+      },
+      {
+        name: 'Nerd Stuff',
+        link: '/nerd-stuff'
+      }
+    ]
   },
   plugins: [
     {

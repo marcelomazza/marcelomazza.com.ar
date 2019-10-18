@@ -9,7 +9,7 @@ class Work extends React.Component {
     const siteTitle = data.site.siteMetadata.title
 
     return (
-      <Layout location={this.props.location} siteTitle={siteTitle} pageTitle={'Work'}>
+      <Layout siteTitle={siteTitle} pageTitle={'Work'}>
         Work page
       </Layout>
     )

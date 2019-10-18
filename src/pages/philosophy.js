@@ -9,7 +9,7 @@ class Philosophy extends React.Component {
     const siteTitle = data.site.siteMetadata.title
 
     return (
-      <Layout location={this.props.location} siteTitle={siteTitle} pageTitle={'Philosophy'}>
+      <Layout siteTitle={siteTitle} pageTitle={'Philosophy'}>
         Philosophy page
       </Layout>
     )
