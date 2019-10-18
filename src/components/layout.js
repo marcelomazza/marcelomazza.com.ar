@@ -1,11 +1,13 @@
 import React from "react"
 import { Link } from "gatsby"
 
+import PageTitle from "../components/page-title"
+
 import { rhythm, scale } from "../utils/typography"
 
 class Layout extends React.Component {
   render() {
-    const { location, title, children } = this.props
+    const { location, siteTitle, pageTitle, children } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
     let header
 
@@ -26,7 +28,7 @@ class Layout extends React.Component {
             }}
             to={`/`}
           >
-            {title}
+            {siteTitle}
           </Link>
         </h1>
       )
@@ -46,7 +48,7 @@ class Layout extends React.Component {
             }}
             to={`/`}
           >
-            {title}
+            {siteTitle}
           </Link>
         </h3>
       )
@@ -61,6 +63,7 @@ class Layout extends React.Component {
         }}
       >
         <header>{header}</header>
+        <PageTitle title={pageTitle} />
         <main>{children}</main>
         <footer>
           © {new Date().getFullYear()}, Built with
