@@ -1,0 +1,11 @@
+// This is an updated version of the PIE clearfix method that reduces the amount of CSS output.
+// If you need to support Firefox before 3.5 you need to use `legacy-pie-clearfix` instead.
+//
+// Adapted from: [A new micro clearfix hack](http://nicolasgallagher.com/micro-clearfix-hack/)
+@mixin pie-clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

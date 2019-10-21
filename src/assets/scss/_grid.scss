@@ -1,0 +1,47 @@
+.grid {
+
+  @include pie-clearfix;
+
+  .grid-span:nth-child(4n) {
+
+    clear: left;
+
+  }
+
+}
+
+.grid-span {
+
+  margin-bottom: 6em;
+
+  [class^="icon-"] {
+
+    margin-top: 3em;
+    margin-bottom: 0;
+
+  }
+
+  .grid-picture {
+
+    @extend .profile-picture;
+
+    width: 300px;
+    height: 300px;
+
+  }
+
+}
+
+
+@media screen and (min-width: $small) {
+
+  .grid-span {
+
+    width: 30%;
+    padding: 0 1.6%;
+    float: left;
+    font-size: 0.8em;
+
+  }
+
+}

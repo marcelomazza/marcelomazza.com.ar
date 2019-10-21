@@ -1,0 +1,225 @@
+main {
+
+  max-width: 1400px;
+  margin: 0 auto;
+
+}
+
+section {
+
+  padding-top: 10em;
+
+  @include pie-clearfix;
+
+  &:last-child {
+
+    margin-bottom: 10em;
+
+  }
+
+  [class^="icon-"] {
+
+    &:before {
+
+      $s: 2em;
+
+      display: inline-block;
+      width: $s;
+      height: $s;
+      color: $bkg;
+      background: $emphasis;
+      font-size: $s;
+      line-height: $s;
+      text-align: center;
+      border-radius: 100%;
+
+    }
+
+    @media screen and (min-width: $small) {
+
+      float: right;
+
+    }
+
+  }
+
+}
+
+.profile-picture-wrap {
+  display: block;
+  width: 200px;
+  height: 200px;
+  position: relative;
+
+  transform-style: preserve-3d;
+
+  @media screen and (min-width: $medium) {
+
+    float: right;
+
+  }
+
+  &:hover {
+
+    border-bottom: 0;
+
+    .profile-picture {
+
+      opacity: 0;
+      transform: scale(0.85) rotate(-90deg);
+
+    }
+
+    .profile-picture-back {
+
+      opacity: 1;
+      transform: scale(1) rotate(0);
+
+    }
+
+  }
+
+}
+
+.profile-picture,
+.profile-picture-back {
+
+  position: absolute;
+  width: 200px;
+  margin-bottom: 1em;
+  border: none;
+  border-radius: 100%;
+
+  backface-visibility: hidden;
+
+  transition: transform 1s, opacity 500ms;
+
+}
+
+.profile-picture-back {
+  height: 200px;
+  line-height: 200px;
+  color: #FFF;
+  background: $emphasis;
+  text-align: center;
+  opacity: 0;
+
+  transform: scale(0) rotate(180deg);
+
+}
+
+.side {
+
+  margin: 0 5% 1em;
+
+  @include pie-clearfix;
+
+  @media screen and (min-width: $medium) {
+
+    float: left;
+    width: 20%;
+
+  }
+
+  @media screen and (min-width: $large) {
+
+    margin: 0;
+
+  }
+
+}
+
+h2.side {
+
+  margin-top: 0;
+
+  @media screen and (min-width: $medium) {
+
+    text-align: right;
+
+  }
+
+}
+
+
+.content {
+
+  margin: 0 5%;
+
+  @media screen and (min-width: $medium) {
+
+    float: left;
+    width: 55%;
+
+  }
+
+}
+
+.content-full-width {
+
+  margin: 3em -6% 0;
+
+  @media screen and (min-width: $small) {
+
+    margin: 3em -13% 0;
+
+  }
+
+  @media screen and (min-width: $medium) {
+
+    margin: 3em 0;
+
+  }
+
+  @media screen and (min-width: $large) {
+
+    width: 130%;
+    max-width: 1291px;
+
+  }
+
+}
+
+.portfolio {
+
+  h2 {
+
+    font-size: 1.4em;
+
+  }
+
+}
+
+article {
+
+  margin-bottom: 10em;
+
+  h2 {
+
+    margin-top: 0;
+
+  }
+
+  p {
+
+    @media screen and (min-width: $medium) {
+
+      font-size: 0.75em;
+      line-height: 1.5em;
+
+    }
+
+  }
+
+  @include pie-clearfix;
+
+}
+
+footer {
+
+  margin-top: 4em;
+  border-top: 1px solid $neutral;
+  font-size: 0.75em;
+  line-height: 1.2em;
+
+}

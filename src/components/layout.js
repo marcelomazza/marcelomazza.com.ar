@@ -22,12 +22,7 @@ const Layout = (props) => {
   `)
   const header = (
     <header>
-      <h3
-        style={{
-          fontFamily: `Montserrat, sans-serif`,
-          marginTop: 0,
-        }}
-      >
+      <h1 className="site-title">
         <Link
           style={{
             boxShadow: `none`,
@@ -38,16 +33,18 @@ const Layout = (props) => {
         >
           {siteTitle}
         </Link>
-      </h3>
-      <ul>
-        {data.site.siteMetadata.menuLinks.map(link => (
-          <li key={link.name}>
-            <Link to={link.link}>
-              {link.name}
-            </Link>
-          </li>
-        ))}
-      </ul>
+      </h1>
+      <nav id="nav">
+        <ul className="nav">
+          {data.site.siteMetadata.menuLinks.map(link => (
+            <li key={link.name}>
+              <Link to={link.link}>
+                {link.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
     </header>
   )
   return (
@@ -59,7 +56,11 @@ const Layout = (props) => {
     >
       {header}
       <PageTitle title={pageTitle} />
-      <main>{children}</main>
+      <main>
+        <section>
+          {children}
+        </section>
+      </main>
       <footer>
         © {new Date().getFullYear()}, Built with
         {` `}
