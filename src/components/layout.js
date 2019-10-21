@@ -1,6 +1,8 @@
 import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 
+import '../assets/scss/style.scss'
+
 import PageTitle from "../components/page-title"
 
 const Layout = (props) => {
