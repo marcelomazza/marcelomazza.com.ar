@@ -3,8 +3,6 @@ import { Link, useStaticQuery, graphql } from "gatsby"
 
 import PageTitle from "../components/page-title"
 
-import { rhythm } from "../utils/typography"
-
 const Layout = (props) => {
   const { siteTitle, pageTitle, children } = props
   const data = useStaticQuery(graphql`
@@ -55,8 +53,6 @@ const Layout = (props) => {
       style={{
         marginLeft: `auto`,
         marginRight: `auto`,
-        maxWidth: rhythm(24),
-        padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
       }}
     >
       {header}
