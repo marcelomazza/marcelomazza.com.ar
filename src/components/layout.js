@@ -3,10 +3,8 @@ import { Link, useStaticQuery, graphql } from "gatsby"
 
 import '../assets/scss/style.scss'
 
-import PageTitle from "../components/page-title"
-
 const Layout = (props) => {
-  const { siteTitle, pageTitle, children } = props
+  const { siteTitle, children } = props
   const data = useStaticQuery(graphql`
     query LayoutQuery {
       site {
@@ -23,14 +21,7 @@ const Layout = (props) => {
   const header = (
     <header>
       <h1 className="site-title">
-        <Link
-          style={{
-            boxShadow: `none`,
-            textDecoration: `none`,
-            color: `inherit`,
-          }}
-          to={`/`}
-        >
+        <Link to={`/`}>
           {siteTitle}
         </Link>
       </h1>
@@ -48,23 +39,16 @@ const Layout = (props) => {
     </header>
   )
   return (
-    <div
-      style={{
-        marginLeft: `auto`,
-        marginRight: `auto`,
-      }}
-    >
+    <div>
       {header}
-      <PageTitle title={pageTitle} />
       <main>
         <section>
           {children}
         </section>
       </main>
       <footer>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.org">Gatsby</a>
+        <h2>License</h2>
+        <p>This is the license of the website, except the screenshots, of course. I don't know why you would do it, but if you need the code, feel free to reuse it.</p>
       </footer>
     </div>
   )

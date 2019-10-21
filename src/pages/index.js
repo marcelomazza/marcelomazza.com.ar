@@ -10,7 +10,7 @@ class Index extends React.Component {
     const siteTitle = data.site.siteMetadata.title
 
     return (
-      <Layout siteTitle={siteTitle} pageTitle={'Marcelo Mazza - UX Designer'}>
+      <Layout siteTitle={siteTitle}>
         <SEO title="All posts" />
         <div className="side">
           <a className="profile-picture-wrap" href="mailto:ux@marcelomazza.com.ar">
@@ -21,6 +21,14 @@ class Index extends React.Component {
           </a>
         </div>
         <div className="content">
+          <div className="headline">
+            <h1>
+              Marcelo Mazza
+              <span className="tagline">
+                <span className="is-visible">UX Developer</span>
+              </span>
+            </h1>
+          </div>
           <p>Hola! I'm Marcelo Mazza, from Buenos Aires, Argentina. For the last 10 years I’ve been working in User Experience.</p>
           <p>I’m a problem solver, data-oriented kind of guy, and I love crafting solutions from ground-zero; wireframing, iterating, testing & coding each piece of the UX puzzle.</p>
           <p>I’ll do my best to tell you more about me...</p>
