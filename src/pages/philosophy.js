@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import Layout from "../components/layout"
 
 class Philosophy extends React.Component {
@@ -20,7 +21,7 @@ class Philosophy extends React.Component {
           <p>What a lovely phrase. There are thousands if not millions of frameworks an resources out there. The majority of them are Open Source. Use them, you'll save time and effort. You can even collaborate and make them more awesome and better.</p>
           <h2>Be prepared for failure.</h2>
           <p>It will happen. But the best of all is that you can try and keep trying. You just need the desire and hunger of doing it.</p>
-          <a className="btn js-local-scroll" href="#work">See my Work &darr;</a>
+          <Link className="btn" to="/work/">See my Work</Link>
         </div>
       </Layout>
     )
