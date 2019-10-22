@@ -1,16 +1,11 @@
 import React from "react"
-import { graphql } from "gatsby"
-
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 class Index extends React.Component {
   render() {
-    const { data } = this.props
-    const siteTitle = data.site.siteMetadata.title
-
     return (
-      <Layout siteTitle={siteTitle}>
+      <Layout>
         <SEO title="All posts" />
         <div className="side">
           <a className="profile-picture-wrap" href="mailto:ux@marcelomazza.com.ar">
@@ -39,13 +34,3 @@ class Index extends React.Component {
 }
 
 export default Index
-
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`

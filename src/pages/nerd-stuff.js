@@ -1,15 +1,10 @@
 import React from "react"
-import { graphql } from "gatsby"
-
 import Layout from "../components/layout"
 
 class NerdStuff extends React.Component {
   render() {
-    const { data } = this.props
-    const siteTitle = data.site.siteMetadata.title
-
     return (
-      <Layout siteTitle={siteTitle}>
+      <Layout>
         <div className="side">
           <div class="icon-flow-children"></div>
         </div>
@@ -52,13 +47,3 @@ class NerdStuff extends React.Component {
 }
 
 export default NerdStuff
-
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`

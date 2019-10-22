@@ -1,15 +1,10 @@
 import React from "react"
-import { graphql } from "gatsby"
-
 import Layout from "../components/layout"
 
 class Philosophy extends React.Component {
   render() {
-    const { data } = this.props
-    const siteTitle = data.site.siteMetadata.title
-
     return (
-      <Layout siteTitle={siteTitle}>
+      <Layout>
         <div className="side">
           <div class="icon-flow-children"></div>
         </div>
@@ -25,7 +20,7 @@ class Philosophy extends React.Component {
           <p>What a lovely phrase. There are thousands if not millions of frameworks an resources out there. The majority of them are Open Source. Use them, you'll save time and effort. You can even collaborate and make them more awesome and better.</p>
           <h2>Be prepared for failure.</h2>
           <p>It will happen. But the best of all is that you can try and keep trying. You just need the desire and hunger of doing it.</p>
-          <a class="btn js-local-scroll" href="#work">See my Work &darr;</a>
+          <a className="btn js-local-scroll" href="#work">See my Work &darr;</a>
         </div>
       </Layout>
     )
@@ -33,13 +28,3 @@ class Philosophy extends React.Component {
 }
 
 export default Philosophy
-
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`

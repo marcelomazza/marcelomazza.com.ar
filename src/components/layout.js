@@ -1,46 +1,13 @@
 import React from "react"
-import { Link, useStaticQuery, graphql } from "gatsby"
+import Header from "../components/header"
 
 import '../assets/scss/style.scss'
 
 const Layout = (props) => {
-  const { siteTitle, children } = props
-  const data = useStaticQuery(graphql`
-    query LayoutQuery {
-      site {
-        siteMetadata {
-          title
-          menuLinks {
-            name
-            link
-          }
-        }
-      }
-    }
-  `)
-  const header = (
-    <header>
-      <h1 className="site-title">
-        <Link to={`/`}>
-          {siteTitle}
-        </Link>
-      </h1>
-      <nav id="nav">
-        <ul className="nav">
-          {data.site.siteMetadata.menuLinks.map(link => (
-            <li key={link.name}>
-              <Link to={link.link}>
-                {link.name}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </nav>
-    </header>
-  )
+  const { children } = props
   return (
     <div>
-      {header}
+      <Header />
       <main>
         <section>
           {children}
