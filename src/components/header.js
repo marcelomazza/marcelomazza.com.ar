@@ -26,7 +26,7 @@ const Header = (props) => {
         <ul className="nav">
           {data.site.siteMetadata.menuLinks.map(link => (
             <li key={link.name}>
-              <Link to={link.link}>
+              <Link to={link.link} activeClassName="active">
                 {link.name}
               </Link>
             </li>
