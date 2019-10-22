@@ -12,7 +12,7 @@ class Index extends React.Component {
         <SEO title="All posts" />
         <div className="side">
           <a className="profile-picture-wrap" href="mailto:ux@marcelomazza.com.ar">
-            <img className="profile-picture" src={profilePic} />
+            <img className="profile-picture" src={profilePic} alt="Marcelo Mazza" />
             <div className="profile-picture-back">
               Contact me!
             </div>

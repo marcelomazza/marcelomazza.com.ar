@@ -7,7 +7,7 @@ class Philosophy extends React.Component {
     return (
       <Layout>
         <div className="side">
-          <div class="icon-flow-children"></div>
+          <div className="icon-flow-children"></div>
         </div>
         <div className="content">
           <h1>Philosophy</h1>
