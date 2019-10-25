@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import Layout from "../components/layout"
 
 class Work extends React.Component {
@@ -11,7 +11,9 @@ class Work extends React.Component {
         </div>
         <div className="content">
           <h1>Work</h1>
-          <Link className="btn" to="/nerd-stuff/">Nerd stuff</Link>
+          <AniLink paintDrip hex="#BD1A62" duration={0.5} to="/nerd-stuff/" className="btn">
+            Nerd stuff
+          </AniLink>
         </div>
       </Layout>
     )

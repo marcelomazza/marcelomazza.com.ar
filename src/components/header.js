@@ -1,5 +1,6 @@
 import React from "react"
-import { Link, useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 const Header = (props) => {
   const data = useStaticQuery(graphql`
@@ -18,17 +19,17 @@ const Header = (props) => {
   return (
     <header className="nav-large">
       <h1 className="site-title">
-        <Link to={`/`}>
+        <AniLink paintDrip hex="#BD1A62" duration={0.5} to={`/`}>
           {data.site.siteMetadata.title}
-        </Link>
+        </AniLink>
       </h1>
       <nav id="nav">
         <ul className="nav">
           {data.site.siteMetadata.menuLinks.map(link => (
             <li key={link.name}>
-              <Link to={link.link} activeClassName="active">
+              <AniLink paintDrip hex="#BD1A62" duration={0.5} to={link.link} activeClassName="active">
                 {link.name}
-              </Link>
+              </AniLink>
             </li>
           ))}
         </ul>

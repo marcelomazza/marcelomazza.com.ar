@@ -6,7 +6,7 @@ import '../assets/scss/style.scss'
 const Layout = (props) => {
   const { children } = props
   return (
-    <div>
+    <div style={{background: 'white'}}>
       <Header />
       <main>
         <section>

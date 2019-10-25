@@ -10,17 +10,8 @@ body {
   transition: all 500ms;
 
   @media screen and (min-width: $small) {
-    padding: 0 2.1em;
     font-size: 20px;
     line-height: 1.6em;
-  }
-
-  @media screen and (min-width: $medium) {
-    padding: 0;
-  }
-
-  @media screen and (min-width: $large) {
-    padding: 0 4.2em;
   }
 }
 
