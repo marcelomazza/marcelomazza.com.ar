@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Marcelo Mazza | UX`,
+    title: `Marcelo Mazza`,
+    seoTitle: `Marcelo Mazza | UX Consultant, Web Designer, Front-end developer`,
     author: `Marcelo Mazza`,
     description: `Marcelo is a freelance UX Designer and Front-end Developer based in Buenos Aires, Argentina with over 14 years of experience.`,
     siteUrl: `http://marcelomazza.com.ar/`,

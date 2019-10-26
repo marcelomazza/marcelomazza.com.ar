@@ -1,11 +1,13 @@
 import React from "react"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import Layout from "../components/layout"
+import SEO from "../components/seo"
 
 class Philosophy extends React.Component {
   render() {
     return (
       <Layout>
+        <SEO title="Philosophy" />
         <div className="side">
           <div className="icon-flow-children"></div>
         </div>

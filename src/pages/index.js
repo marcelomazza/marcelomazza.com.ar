@@ -47,7 +47,7 @@ class Index extends React.Component {
   render() {
     return (
       <Layout>
-        <SEO title="All posts" />
+        <SEO title="Home" />
         <div className="side">
           <a className="profile-picture-wrap" href="mailto:ux@marcelomazza.com.ar">
             <img className="profile-picture" src={profilePic} alt="Marcelo Mazza" />
