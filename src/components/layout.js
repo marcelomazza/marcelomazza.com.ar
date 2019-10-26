@@ -14,8 +14,15 @@ const Layout = (props) => {
         </section>
       </main>
       <footer>
-        <h2>License</h2>
-        <p>This is the license of the website, except the screenshots, of course. I don't know why you would do it, but if you need the code, feel free to reuse it.</p>
+        <section>
+          <div class="side">
+            <h2>The End</h2>
+          </div>
+          <div class="content">
+            <p>Source code is licensed under the MIT license.</p>
+            <p>Contents is &copy; Copyright 2019 Marcelo Mazza. All rights reserved.</p>
+          </div>
+        </section>
       </footer>
     </div>
   )
