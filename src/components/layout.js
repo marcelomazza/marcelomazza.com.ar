@@ -16,7 +16,7 @@ const Layout = (props) => {
       <footer>
         <section>
           <div class="side">
-            <h2>The End</h2>
+            <h2>&nbsp;</h2>
           </div>
           <div class="content">
             <p>Source code is licensed under the MIT license.</p>
