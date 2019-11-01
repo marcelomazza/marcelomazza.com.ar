@@ -8,7 +8,7 @@ class NerdStuff extends React.Component {
       <Layout>
         <SEO title="Nerd stuff" />
         <div className="side">
-          <div className="icon-flow-children"></div>
+          <div className="icon-spanner"></div>
         </div>
         <div className="content">
           <h1>Nerd stuff</h1>

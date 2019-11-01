@@ -9,7 +9,7 @@ class Work extends React.Component {
       <Layout>
         <SEO title="Work" />
         <div className="side">
-          <div className="icon-flow-children"></div>
+          <div className="icon-eye"></div>
         </div>
         <div className="content">
           <h1>Work</h1>
