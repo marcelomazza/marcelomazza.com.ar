@@ -15,10 +15,10 @@ const Layout = (props) => {
       </main>
       <footer>
         <section>
-          <div class="side">
+          <div className="side">
             <h2>&nbsp;</h2>
           </div>
-          <div class="content">
+          <div className="content">
             <p>Source code is licensed under the MIT license.</p>
             <p>Contents is &copy; Copyright 2019 Marcelo Mazza. All rights reserved.</p>
           </div>
