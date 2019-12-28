@@ -41,7 +41,9 @@ class NerdStuff extends React.Component {
             <h2>Contact me</h2>
             <p><a className="btn" href="mailto:ux@marcelomazza.com.ar">ux@marcelomazza.com.ar</a></p>
           <h2>Playground: Chrome Extension</h2>
-          <p>I did it a couple of months ago, based on caniuse.com site. Check it out! <a target="_blank" href="https://chrome.google.com/webstore/detail/can-i-use/kinefpelfmogilfkmjlbfkamgmofmedf">Can I Use? Chrome Extension</a>. You can also check <a target="_blank" href="http://github.com/marcelomazza/caniuse-chrome-extension">it's source code</a>.</p>
+          <p>I did it a couple of months ago, based on caniuse.com site. Check it out!
+          <a target="_blank" rel="noopener noreferrer" href="https://chrome.google.com/webstore/detail/can-i-use/kinefpelfmogilfkmjlbfkamgmofmedf">Can I Use? Chrome Extension</a>.
+          You can also check <a target="_blank" rel="noopener noreferrer" href="http://github.com/marcelomazza/caniuse-chrome-extension">it's source code</a>.</p>
         </div>
       </Layout>
     )
