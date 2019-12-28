@@ -29,7 +29,7 @@ class Index extends React.Component {
         interval: 0
       });
       console.log("stop");
-    }, this.randomIntFromInterval(500, 3000));
+    }, this.randomIntFromInterval(500, 2000));
   }
 
   randomIntFromInterval(min, max) {
