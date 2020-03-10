@@ -28,7 +28,6 @@ class Index extends React.Component {
       this.setState({
         interval: 0
       });
-      console.log("stop");
     }, this.randomIntFromInterval(500, 2000));
   }
 
@@ -37,7 +36,6 @@ class Index extends React.Component {
   }
 
   handleClick() {
-    console.log('handleClick');
     this.setState(state => ({
       interval: interval
     }));
