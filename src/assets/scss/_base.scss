@@ -1,0 +1,64 @@
+body {
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.4em;
+  color: $frg;
+  background: $bkg;
+  text-align: left;
+  transition: all 500ms;
+  -webkit-font-smoothing: antialising;
+
+  @media screen and (min-width: $small) {
+    font-size: 20px;
+    line-height: 1.6em;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $emphasis;
+
+  &:hover {
+    border-bottom: 2px solid $emphasis;
+  }
+}
+
+ul {
+  list-style: disc;
+}
+
+h1, h2 {
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 3.5em;
+  line-height: 1.2em;
+  margin-bottom: 0.8em;
+}
+
+h2 {
+  font-size: 2em;
+  line-height: 1.05em;
+  margin-bottom: 0.35em;
+  margin-top: 1.05em;
+}
+
+p, ul {
+  margin-bottom: 1.4em;
+
+  @media screen and (min-width: $small) {
+    margin-bottom: 2em;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+
+.line {
+  text-decoration: line-through;
+}
