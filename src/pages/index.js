@@ -1,6 +1,5 @@
 import React from "react"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
-import TextLoop from "react-text-loop";
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -12,34 +11,6 @@ const interval = 60;
 class Index extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      interval: interval
-    };
-
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  componentDidMount() {
-    this.randomStop();
-  }
-
-  randomStop() {
-    setTimeout(() => {
-      this.setState({
-        interval: 0
-      });
-    }, this.randomIntFromInterval(500, 2000));
-  }
-
-  randomIntFromInterval(min, max) {
-    return Math.floor(Math.random() * (max - min + 1) + min);
-  }
-
-  handleClick() {
-    this.setState(state => ({
-      interval: interval
-    }));
-    this.randomStop();
   }
 
   render() {
@@ -56,16 +27,10 @@ class Index extends React.Component {
         </div>
         <div className="content">
           <div className="headline">
-            <h1 onClick={this.handleClick} style={{cursor: 'pointer'}}>
+            <h1>
               Marcelo Mazza
-              <TextLoop interval={this.state.interval}>
-                <span>Front-end Developer</span>
-                <span>Web Designer</span>
-                <span>UX Consultant</span>
-                <span>Usability Researcher</span>
-                <span>Project Manager</span>
-                <span>Team Leader</span>
-              </TextLoop>
+              <br/>
+              Front-end Developer &amp; web designer
             </h1>
           </div>
           <p>Hola! I'm Marcelo Mazza, from Buenos Aires, Argentina. For the last 10 years I’ve been working in User Experience.</p>
