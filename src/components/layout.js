@@ -6,7 +6,7 @@ import '../assets/scss/style.scss'
 const Layout = (props) => {
   const { children } = props
   return (
-    <div style={{background: 'white'}}>
+    <div>
       <Header />
       <main>
         <section>
@@ -20,7 +20,7 @@ const Layout = (props) => {
           </div>
           <div className="content">
             <p>Source code is licensed under the MIT license.</p>
-            <p>Contents is &copy; Copyright 2019 Marcelo Mazza. All rights reserved.</p>
+            <p>Contents is &copy; Copyright {new Date().getFullYear()} Marcelo Mazza. All rights reserved.</p>
           </div>
         </section>
       </footer>

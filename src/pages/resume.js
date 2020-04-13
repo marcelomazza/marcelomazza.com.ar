@@ -4,19 +4,19 @@ import AniLink from "gatsby-plugin-transition-link/AniLink"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-class Work extends React.Component {
+class Resume extends React.Component {
   render() {
     const { data } = this.props
     const work = data.allMarkdownRemark.edges
 
     return (
       <Layout>
-        <SEO title="Work" />
+        <SEO title="Resume" />
         <div className="side">
           <div className="icon-eye"></div>
         </div>
         <div className="content">
-          <h1>Work</h1>
+          <h1>Resume</h1>
           {work.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
             return (
@@ -32,8 +32,8 @@ class Work extends React.Component {
               </article>
             )
           })}
-          <AniLink paintDrip hex="#BD1A62" duration={0.5} to="/nerd-stuff/" className="btn">
-            Nerd stuff
+          <AniLink paintDrip hex="#BD1A62" duration={0.5} to="/contact-me/" className="btn">
+            Contact me
           </AniLink>
         </div>
       </Layout>
@@ -41,13 +41,13 @@ class Work extends React.Component {
   }
 }
 
-export default Work
+export default Resume
 
 export const pageQuery = graphql`
   query {
     allMarkdownRemark(
       sort: { fields: [frontmatter___order] },
-      filter: { fileAbsolutePath: {regex : "\/work/"} }
+      filter: { fileAbsolutePath: {regex : "\/resume/"} }
     ) {
       edges {
         node {

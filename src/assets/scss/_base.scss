@@ -5,7 +5,7 @@ body {
   font-weight: 300;
   line-height: 1.4em;
   color: $frg;
-  background: $bkg;
+  // background: $emphasis;
   text-align: left;
   transition: all 500ms;
   -webkit-font-smoothing: antialising;
@@ -13,6 +13,35 @@ body {
   @media screen and (min-width: $small) {
     font-size: 20px;
     line-height: 1.6em;
+  }
+
+  &::before {
+    $offset: 150px;
+    content: "";
+    position: fixed;
+    z-index: 1;
+    bottom: -$offset;
+    right: -50px;
+    display: block;
+    width: 100%;
+    height: $offset * 1.25;
+    background: $emphasisDark;
+    transform: rotate(-10deg);
+  }
+
+  &::after {
+    $offset: 150px;
+    content: "";
+    position: fixed;
+    z-index: 1;
+    bottom: -$offset;
+    right: -50px;
+    display: block;
+    width: 100%;
+    height: $offset;
+    background: $emphasis;
+    transform: rotate(-10deg);
+    box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.25);
   }
 }
 

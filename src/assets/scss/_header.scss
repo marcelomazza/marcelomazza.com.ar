@@ -1,60 +1,63 @@
 header {
-
-  margin-bottom: 2em;
-
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
   padding: 0.5em 1em;
   text-align: left;
-  background: rgba($bkg, 0.85);
-  z-index: 100;
 
   @media screen and (min-width: $small) {
-
     padding: 0.85em;
-
   }
 
   @media screen and (min-width: $medium) {
-
     padding: 0 0.5em;
 
     &.nav-short {
-
       padding: 0 0 0 0.5em;
       overflow: hidden;
-
     }
 
     &.nav-large {
       max-height: 200px;
     }
-
   }
 
+  &::after {
+    $offset: 150px;
+    content: "";
+    position: fixed;
+    z-index: 1;
+    top: -112px;
+    left: -50px;
+    display: block;
+    width: 100%;
+    height: 150px;
+    background: $emphasis;
+    transform: rotate(-10deg);
+
+    @media screen and (min-width: $small) {
+      top: -150px;
+    }
+  }
 }
 
 .site-title {
-
+  position: relative;
+  z-index: 2;
   margin-bottom: 0;
   width: 90%;
   font-size: 1.2em;
   padding: 0.2em 0;
 
-  transition: all $transitionDefault;
+  a {
+    color: $bkg;
+    opacity: 1;
+    transition: all $transitionDefault;
 
-  @media screen and (min-width: $small) and (max-width: $medium) {
-
-    text-align: center;
-
+    &.active {
+      opacity: 0;
+    }
   }
 
   @media screen and (min-width: $small) {
-
     width: auto;
-
   }
 
   @media screen and (min-width: $medium) {
@@ -82,38 +85,19 @@ header {
 }
 
 nav {
+  margin-top: 30px;
+  margin-left: 0;
 
-  max-height: 0;
-  overflow: hidden;
-
-  @media screen and (max-width: $medium) {
-
-    transition: all 500ms;
-
-    &.is-active {
-
-      max-height: 250px;
-      height: auto;
-      margin-top: 1.25em;
-
-    }
-
-  }
-
-  @media screen and (min-width: $small) {
-
+  @media (min-width: $small) {
+    margin-left: 0;
     font-size: 0.8em;
 
     li {
-
       display: inline-block;
-
     }
-
   }
 
   @media screen and (min-width: $medium) {
-
     display: block;
     float: right;
     margin-top: 0;
@@ -160,46 +144,55 @@ nav {
 
 
   a {
-
-    padding: 0 1em 4px;
+    padding: 0 1em 4px 0;
     margin-bottom: 1em;
     display: block;
-    border-top: 4px solid transparent;
+    border-left: 4px solid transparent;
     color: $neutral;
 
-    &:hover {
+    @media screen and (min-width: $small) {
+      border-top: 4px solid transparent;
+      border-left: none;
+    }
 
+    &:hover {
       padding: 0 1em;
-      border-top: 4px solid $emphasis;
+      border-left: 4px solid $emphasis;
       border-bottom: none;
 
+      @media screen and (min-width: $small) {
+        border-top: 4px solid $emphasis;
+        border-left: none;
+      }
     }
 
     transition: all 500ms;
 
     @media screen and (min-width: $medium) {
-
+      padding: 0 1em 4px;
       margin-bottom: 0;
       line-height: 2.5em;
 
     }
 
     @media screen and (min-width: $medium) {
-
       .nav-large & {
-
         line-height: 3.5em;
-
       }
-
     }
 
+    &.active {
+      padding: 0 1em;
+      border-left: 4px solid $neutral;
+
+      @media screen and (min-width: $small) {
+        padding: 0 1em;
+        border-top: 4px solid $neutral;
+        border-left: none;
+      }
+    }
   }
 
-  .active {
-    padding: 0 1em;
-    border-top: 4px solid $neutral;
-  }
 
   ul {
 

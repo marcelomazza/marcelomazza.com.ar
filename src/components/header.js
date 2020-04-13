@@ -19,7 +19,7 @@ const Header = (props) => {
   return (
     <header className="nav-large">
       <h1 className="site-title">
-        <AniLink paintDrip hex="#BD1A62" duration={0.5} to={`/`}>
+        <AniLink paintDrip hex="#BD1A62" duration={0.5} to={`/`} activeClassName="active">
           {data.site.siteMetadata.title}
         </AniLink>
       </h1>

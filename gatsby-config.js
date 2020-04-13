@@ -10,20 +10,20 @@ module.exports = {
     },
     menuLinks: [
       {
-        name: 'Home',
+        name: '/',
         link: '/'
       },
       {
-        name: 'Philosophy',
-        link: '/philosophy'
+        name: 'How I Work',
+        link: '/how-i-work'
       },
       {
-        name: 'Work',
-        link: '/work'
+        name: 'Resume',
+        link: '/resume'
       },
       {
-        name: 'Nerd Stuff',
-        link: '/nerd-stuff'
+        name: 'Contact Me',
+        link: '/contact-me'
       }
     ]
   },
@@ -38,8 +38,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/work`,
-        name: `work`,
+        path: `${__dirname}/content/resume`,
+        name: `resume`,
       },
     },
     {
