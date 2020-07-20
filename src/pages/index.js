@@ -4,13 +4,7 @@ import AniLink from "gatsby-plugin-transition-link/AniLink"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-import profilePic from '../assets/img/profile-picture-small.jpg'
-
 class Index extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <Layout>
