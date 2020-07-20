@@ -8,10 +8,10 @@ class ContactMe extends React.Component {
       <Layout>
         <SEO title="Contact Me" />
         <div className="side">
-          <div className="icon-spanner"></div>
+          <div className="side__icon icon-spanner"></div>
         </div>
         <div className="content">
-          <h1>Contact Me</h1>
+          <h1 className="color-emphasis">Contact Me</h1>
           <p><a className="btn" href="mailto:ux@marcelomazza.com.ar">ux@marcelomazza.com.ar</a></p>
         </div>
       </Layout>

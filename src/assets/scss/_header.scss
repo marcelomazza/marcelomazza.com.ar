@@ -1,10 +1,6 @@
 header {
-  padding: 0.5em 1em;
+  padding: 0.5em $site-padding;
   text-align: left;
-
-  @media screen and (min-width: $small) {
-    padding: 0.85em;
-  }
 
   @media screen and (min-width: $medium) {
     padding: 0 0.5em;
@@ -19,69 +15,56 @@ header {
     }
   }
 
-  &::after {
-    $offset: 150px;
-    content: "";
-    position: fixed;
-    z-index: 1;
-    top: -112px;
-    left: -50px;
-    display: block;
-    width: 100%;
-    height: 150px;
-    background: $emphasis;
-    transform: rotate(-10deg);
+  @media screen and (min-width: $medium) {
+    padding: 0 5rem;
+  }
+}
 
-    @media screen and (min-width: $small) {
-      top: -150px;
-    }
+.nav-large {
+  @media (min-width: $large) {
+    display: flex;
   }
 }
 
 .site-title {
-  position: relative;
-  z-index: 2;
-  margin-bottom: 0;
-  width: 90%;
-  font-size: 1.2em;
-  padding: 0.2em 0;
+  @media (min-width: $small) {
+    margin-bottom: 0;
+    line-height: 1;
+  }
 
   a {
-    color: $bkg;
+    display: block;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 0;
+    width: 90%;
+    font-size: 1.2rem;
+    padding: 0 1rem 0 0;
+    border-left: 4px solid transparent;
+    color: $text-dark;
     opacity: 1;
     transition: all $transitionDefault;
 
     &.active {
-      opacity: 0;
-    }
-  }
+      display: none;
 
-  @media screen and (min-width: $small) {
-    width: auto;
-  }
-
-  @media screen and (min-width: $medium) {
-
-    float: left;
-
-    .nav-large & {
-      line-height: 2.5em;
+      @media (min-width: $large) {
+        display: block;
+        opacity: 0;
+      }
     }
 
-  }
-
-  @media screen and (min-width: $large) {
-
-    .nav-large & {
-
-      font-size: 1.5em;
-      line-height: 1.8em;
-      padding: 0.5em 1.5em;
-
+    @media (min-width: $small) {
+      width: auto;
+      text-align: center;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
     }
 
+    @media (min-width: $medium) {
+      margin-bottom: -40px;
+    }
   }
-
 }
 
 nav {
@@ -89,100 +72,59 @@ nav {
   margin-left: 0;
 
   @media (min-width: $small) {
+    margin-top: -58px;
     margin-left: 0;
     font-size: 0.8em;
-
-    li {
-      display: inline-block;
-    }
   }
 
-  @media screen and (min-width: $medium) {
-    display: block;
-    float: right;
-    margin-top: 0;
-    max-height: 100px;
-
-    &.is-active {
-
-      // max-height: 80px;
-      margin-top: 0;
-
-    }
-
-    li {
-
-      display: block;
-      float: left;
-
-    }
-
+  @media (min-width: $medium) {
+    margin-top: 30px;
   }
 
-  @media screen and (min-width: $large) {
-
-    .nav-large & {
-
-      font-size: 1em;
-
-    }
-
-    &.is-active {
-
-      margin-top: 0;
-
-    }
-
-    .btn {
-
-      margin: 0.6em 0 0;
-
-    }
-
-
+  @media (min-width: $large) {
+    margin-top: 0.5rem;
+    margin-left: auto;
   }
-
 
   a {
-    padding: 0 1em 4px 0;
+    padding: 0 1em 0 0;
     margin-bottom: 1em;
     display: block;
     border-left: 4px solid transparent;
     color: $neutral;
-
-    @media screen and (min-width: $small) {
-      border-top: 4px solid transparent;
-      border-left: none;
-    }
+    transition: all 500ms;
 
     &:hover {
       padding: 0 1em;
       border-left: 4px solid $emphasis;
       border-bottom: none;
+    }
 
-      @media screen and (min-width: $small) {
+    @media (min-width: $small) {
+      padding: 0;
+      border-top: 4px solid transparent;
+      border-left: none;
+
+      &:hover {
+        padding: 0;
         border-top: 4px solid $emphasis;
         border-left: none;
       }
     }
 
-    transition: all 500ms;
+    @media (min-width: $large) {
+      min-width: 5rem;
+      padding: 0.5rem 2rem;
 
-    @media screen and (min-width: $medium) {
-      padding: 0 1em 4px;
-      margin-bottom: 0;
-      line-height: 2.5em;
-
-    }
-
-    @media screen and (min-width: $medium) {
-      .nav-large & {
-        line-height: 3.5em;
+      &:hover {
+        padding: 0.5rem 2rem;
       }
     }
 
     &.active {
-      padding: 0 1em;
+      $spacer: 2em;
+      margin-left: -$spacer;
+      padding: 0 $spacer;
       border-left: 4px solid $neutral;
 
       @media screen and (min-width: $small) {
@@ -190,40 +132,35 @@ nav {
         border-top: 4px solid $neutral;
         border-left: none;
       }
+
+      @media (min-width: $large) {
+        margin-left: 0;
+        padding: 0.5rem 2rem;
+      }
     }
   }
 
-
   ul {
-
     list-style: none;
 
     @media screen and (min-width: $small) {
-
       margin-bottom: 0;
       text-align: center;
-
     }
+  }
+}
 
+.nav {
+  @media (min-width: $small) {
+    display: flex;
+    margin: 0 auto;
+    width: 70vw;
+    justify-content: space-around;
   }
 
-
-  .btn {
-
-    margin: 1em 0 0;
-    padding: 0.5em 1.5em;
-    font-size: 0.8em;
-    border-bottom: none;
-
-    @media screen and (min-width: $medium) {
-
-      margin: 0;
-
-    }
-
+  @media (min-width: $medium) {
+    width: auto;
   }
-
-
 }
 
 .nav-toggle {

@@ -6,7 +6,7 @@
   top: 0;
   z-index: 0;
   font-weight: 400;
-  color: $emphasis;
+  color: $frg;
   border: 2px solid $emphasis;
   border-radius: 3px;
   transition: color 200ms;
@@ -35,7 +35,7 @@
 
   &:active {
     top: 5px;
-    border-color: $emphasisDark;
-    background: $emphasisDark;
+    border-color: $emphasis;
+    background: $emphasis;
   }
 }

@@ -9,10 +9,10 @@ class HowIWork extends React.Component {
       <Layout>
         <SEO title="How I Work" />
         <div className="side">
-          <div className="icon-flow-children"></div>
+          <div className="side__icon icon-flow-children"></div>
         </div>
         <div className="content">
-          <h1>How I Work</h1>
+          <h1 className="color-emphasis">How I Work</h1>
           <h2>Get the data.</h2>
           <p>Learn from the real world. Data is easier to find than ever, it's everywhere. Use it wisely, and keep using it throughout the project, before, during, after. Shape your interface around it.</p>
           <h2>Understand....</h2>
@@ -23,8 +23,8 @@ class HowIWork extends React.Component {
           <p>Don't overthink it. Use already existing resources. Use the saved time and iterate a bit more.</p>
           <h2>Be prepared for failure.</h2>
           <p>It will happen. An excellent excuse to... iterate again.</p>
-          <AniLink paintDrip hex="#BD1A62" duration={0.5} to="/resume/" className="btn">
-            Resume
+          <AniLink paintDrip hex="#e63946" duration={0.5} to="/experience/" className="btn">
+            Experience
           </AniLink>
         </div>
       </Layout>

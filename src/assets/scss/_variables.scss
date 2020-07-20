@@ -1,11 +1,13 @@
 // Colors
-$bkg: #FFF;
-$frg: #444;
+$bkg: #2b2d42;
+$frg: #a8dadc;
+$brd: #F1FAEE;
 
 $neutral: #8B99AD;
 
-$emphasis: #BD1A62;
-$emphasisDark: #964B7B;
+$text-dark: #457b9d;
+
+$emphasis: #e63946;
 
 
 // Transition duration
@@ -19,3 +21,9 @@ $large: 1200px;
 
 // media queries
 $min-width-small: "(min-width: $small)";
+
+$site-border: 1rem;
+$site-border-small: 3rem;
+
+$site-padding: 3rem;
+$site-padding-small: 7rem;

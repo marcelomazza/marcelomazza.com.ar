@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: `Marcelo Mazza`,
-    seoTitle: `Marcelo Mazza | UX Consultant, Web Designer, Front-end developer`,
+    seoTitle: `Marcelo Mazza | UX Consultant, Web Designer, Frontend developer`,
     author: `Marcelo Mazza`,
-    description: `Marcelo is a freelance UX Designer and Front-end Developer based in Buenos Aires, Argentina with over 14 years of experience.`,
+    description: `Marcelo is a freelance UX Designer and Frontend Developer based in Buenos Aires, Argentina with over 14 years of experience.`,
     siteUrl: `http://marcelomazza.com.ar/`,
     social: {
       twitter: `marcelomazza`,
@@ -18,8 +18,8 @@ module.exports = {
         link: '/how-i-work'
       },
       {
-        name: 'Resume',
-        link: '/resume'
+        name: 'Experience',
+        link: '/experience'
       },
       {
         name: 'Contact Me',
@@ -38,8 +38,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/resume`,
-        name: `resume`,
+        path: `${__dirname}/content/experience`,
+        name: `experience`,
       },
     },
     {
