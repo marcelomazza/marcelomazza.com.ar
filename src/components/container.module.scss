@@ -1,0 +1,61 @@
+@import "../assets/scss/variables.scss";
+
+$separator: 3rem;
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(100% - 6rem);
+  margin: 1.5rem;
+  background-image: linear-gradient(#fa0135 50%, #fff9f2 50%);
+  /* df002e */
+  @media (min-width: $small) {
+    margin: $separator;
+    background-image: linear-gradient(to right, #fa0135 50%, #fff9f2 50%);
+  }
+
+  &:before,
+  &:after {
+    position: absolute;
+    font-size: 72px;
+    line-height: 1em;
+  }
+
+  &:before {
+    content: "{";
+    top: $separator / 2;
+    left: $separator / 2;
+    color: #fff9f2;
+
+    @media (min-width: $small) {
+      top: $separator;
+      left: $separator;
+    }
+  }
+
+  &:after {
+    content: "}";
+    bottom: $separator / 2;
+    right: $separator / 2;
+    color: #df002e;
+
+    @media (min-width: $small) {
+      bottom: $separator;
+      right: $separator;
+    }
+  }
+
+  :global(.nav-large) {
+    margin-left: 30%;
+  }
+
+  :global(.nav-large a) {
+    color: white;
+
+    @media (min-width: $small) {
+      color: $text-dark;
+    }
+  }
+}

@@ -19,7 +19,7 @@ const Header = (props) => {
   return (
     <header className="nav-large">
       <h1 className="site-title">
-        <AniLink paintDrip hex="#e63946" duration={0.5} to={`/`} activeClassName="active">
+        <AniLink paintDrip hex="#fa0135" duration={0.5} to={`/`} activeClassName="active">
           {data.site.siteMetadata.title}
         </AniLink>
       </h1>
@@ -27,7 +27,7 @@ const Header = (props) => {
         <ul className="nav">
           {data.site.siteMetadata.menuLinks.map(link => (
             <li key={link.name}>
-              <AniLink paintDrip hex="#e63946" duration={0.5} to={link.link} activeClassName="active">
+              <AniLink paintDrip hex="#fa0135" duration={0.5} to={link.link} activeClassName="active">
                 {link.name}
               </AniLink>
             </li>

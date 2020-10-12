@@ -1,0 +1,19 @@
+@import "../assets/scss/variables.scss";
+
+.title-container {
+  margin-left: 1rem;
+  line-height: 1;
+  color: #df002e;
+
+  @media (min-width: $small) {
+    margin-left: 3rem;
+    transform: translateX(50%);
+  }
+}
+
+.subtitle {
+  display: block;
+  margin-top: 1em;
+  font-size: 24px;
+  font-family: "Montserrat", sans-serif;
+}
