@@ -9,11 +9,11 @@ $separator: 3rem;
   justify-content: space-between;
   height: calc(100% - 6rem);
   margin: 1.5rem;
-  background-image: linear-gradient(#fa0135 50%, #fff9f2 50%);
-  /* df002e */
+  background-image: linear-gradient(var(--color-emphasis) 50%, var(--color-light) 50%);
+
   @media (min-width: $small) {
     margin: $separator;
-    background-image: linear-gradient(to right, #fa0135 50%, #fff9f2 50%);
+    background-image: linear-gradient(to right, var(--color-emphasis) 50%, var(--color-light) 50%);
   }
 
   &:before,
@@ -27,7 +27,7 @@ $separator: 3rem;
     content: "{";
     top: $separator / 2;
     left: $separator / 2;
-    color: #fff9f2;
+    color: var(--color-light);
 
     @media (min-width: $small) {
       top: $separator;
@@ -39,7 +39,7 @@ $separator: 3rem;
     content: "}";
     bottom: $separator / 2;
     right: $separator / 2;
-    color: #df002e;
+    color: var(--color-emphasis-dark);
 
     @media (min-width: $small) {
       bottom: $separator;
