@@ -12,9 +12,6 @@ class Experience extends React.Component {
     return (
       <Layout>
         <SEO title="Experience" />
-        <div className="side">
-          <div className="side__icon icon-eye"></div>
-        </div>
         <div className="content">
           <h1 className="color-emphasis">Experience</h1>
           {work.map(({ node }) => {

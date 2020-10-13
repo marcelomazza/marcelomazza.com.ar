@@ -15,9 +15,6 @@ const Layout = (props) => {
       </main>
       <footer>
         <section>
-          <div className="side">
-            <h2>&nbsp;</h2>
-          </div>
           <div className="content">
             <p>Source code is licensed under the MIT license.</p>
             <p>Contents is &copy; Copyright {new Date().getFullYear()} Marcelo Mazza. All rights reserved.</p>

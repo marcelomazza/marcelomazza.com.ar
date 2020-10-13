@@ -8,9 +8,6 @@ class HowIWork extends React.Component {
     return (
       <Layout>
         <SEO title="How I Work" />
-        <div className="side">
-          <div className="side__icon icon-flow-children"></div>
-        </div>
         <div className="content">
           <h1 className="color-emphasis">How I Work</h1>
           <h2>Get the data.</h2>
