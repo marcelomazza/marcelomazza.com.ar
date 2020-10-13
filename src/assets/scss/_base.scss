@@ -26,10 +26,10 @@ body {
 
 a {
   text-decoration: none;
-  color: $emphasis;
+  color: var(--color-emphasis);
 
   &:hover {
-    border-bottom: 2px solid $emphasis;
+    border-bottom: 2px solid var(--color-emphasis);
   }
 }
 
@@ -67,5 +67,5 @@ img {
 }
 
 .color-emphasis {
-  color: $emphasis;
+  color: var(--color-emphasis);
 }

@@ -55,7 +55,7 @@ $separator: 3rem;
     color: white;
 
     @media (min-width: $small) {
-      color: $text-dark;
+      color: var(--color-neutral);
     }
   }
 }

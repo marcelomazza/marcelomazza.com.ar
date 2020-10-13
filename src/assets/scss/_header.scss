@@ -1,5 +1,5 @@
 header {
-  padding: 0.5em $site-padding;
+  padding: 0.5em 3rem;
   text-align: left;
 
   @media screen and (min-width: $medium) {
@@ -41,9 +41,8 @@ header {
     font-size: 1.2rem;
     padding: 0 1rem 0 0;
     border-left: 4px solid transparent;
-    color: $text-dark;
+    color: var(--color-neutral);
     opacity: 1;
-    transition: all $transitionDefault;
 
     &.active {
       display: none;
@@ -91,12 +90,12 @@ nav {
     margin-bottom: 1em;
     display: block;
     border-left: 4px solid transparent;
-    color: $neutral;
+    color: var(--color-neutral);
     transition: all 500ms;
 
     &:hover {
       padding: 0 1em;
-      border-left: 4px solid $emphasis;
+      border-left: 4px solid var(--color-emphasis);
       border-bottom: none;
     }
 
@@ -107,7 +106,7 @@ nav {
 
       &:hover {
         padding: 0;
-        border-top: 4px solid $emphasis;
+        border-top: 4px solid var(--color-emphasis);
         border-left: none;
       }
     }
@@ -125,11 +124,11 @@ nav {
       $spacer: 2em;
       margin-left: -$spacer;
       padding: 0 $spacer;
-      border-left: 4px solid $neutral;
+      border-left: 4px solid var(--color-neutral);
 
       @media screen and (min-width: $small) {
         padding: 0 1em;
-        border-top: 4px solid $neutral;
+        border-top: 4px solid var(--color-neutral);
         border-left: none;
       }
 

@@ -6,8 +6,7 @@
   top: 0;
   z-index: 0;
   font-weight: 400;
-  color: $frg;
-  border: 2px solid $emphasis;
+  border: 2px solid var(--color-emphasis);
   border-radius: 3px;
   transition: color 200ms;
 
@@ -18,15 +17,15 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: $emphasis;
+    background: var(--color-emphasis);
     z-index: -1;
     transform: scaleY(0);
     transition: transform 200ms;
   }
 
   &:hover {
-    color: $bkg;
-    border: 2px solid $emphasis;
+    color: var(--color-text);
+    border: 2px solid var(--color-emphasis);
 
     &:after {
       transform: scaleY(1);
@@ -35,7 +34,7 @@
 
   &:active {
     top: 5px;
-    border-color: $emphasis;
-    background: $emphasis;
+    border-color: var(--color-emphasis);
+    background: var(--color-emphasis);
   }
 }
