@@ -13,14 +13,6 @@ const Layout = (props) => {
           {children}
         </section>
       </main>
-      <footer>
-        <section>
-          <div className="content">
-            <p>Source code is licensed under the MIT license.</p>
-            <p>Contents is &copy; Copyright {new Date().getFullYear()} Marcelo Mazza. All rights reserved.</p>
-          </div>
-        </section>
-      </footer>
     </div>
   )
 }
