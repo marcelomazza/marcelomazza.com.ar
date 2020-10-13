@@ -5,6 +5,9 @@ import SEO from "../components/seo"
 
 class HowIWork extends React.Component {
   render() {
+    const colorEmphasis = getComputedStyle(document.documentElement)
+      .getPropertyValue('--color-emphasis');
+
     return (
       <Layout>
         <SEO title="How I Work" />
@@ -20,7 +23,7 @@ class HowIWork extends React.Component {
           <p>Don't overthink it. Use already existing resources. Use the saved time and iterate a bit more.</p>
           <h2>Be prepared for failure.</h2>
           <p>It will happen. An excellent excuse to... iterate again.</p>
-          <AniLink paintDrip hex="#e63946" duration={0.5} to="/experience/" className="btn">
+          <AniLink paintDrip hex={colorEmphasis} duration={0.5} to="/experience/" className="btn">
             Experience
           </AniLink>
         </div>

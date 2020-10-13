@@ -9,6 +9,9 @@ class Experience extends React.Component {
     const { data } = this.props
     const work = data.allMarkdownRemark.edges
 
+    const colorEmphasis = getComputedStyle(document.documentElement)
+      .getPropertyValue('--color-emphasis');
+
     return (
       <Layout>
         <SEO title="Experience" />
@@ -29,7 +32,7 @@ class Experience extends React.Component {
               </article>
             )
           })}
-          <AniLink paintDrip hex="#e63946" duration={0.5} to="/contact-me/" className="btn">
+          <AniLink paintDrip hex={colorEmphasis} duration={0.5} to="/contact-me/" className="btn">
             Contact me
           </AniLink>
         </div>

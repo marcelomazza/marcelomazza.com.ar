@@ -1,10 +1,11 @@
 @import "../assets/scss/variables.scss";
 
 .header-container {
-  margin-top: -3rem;
+  margin-top: -3.5rem;
 
   @media (min-width: $large) {
     display: flex;
+    align-items: center;
   }
 }
 
@@ -42,6 +43,7 @@
     transition: all 500ms;
 
     @media (min-width: $small) {
+      margin-bottom: 0;
       padding: 0;
       border-top: 4px solid transparent;
       border-left: none;

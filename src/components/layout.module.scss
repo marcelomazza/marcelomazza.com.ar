@@ -1,0 +1,56 @@
+@import "../assets/scss/variables.scss";
+
+$separator: 3rem;
+
+.layout {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(100% - 6rem);
+  margin: 1.5rem;
+  background-image: linear-gradient(var(--color-emphasis) 30%, var(--color-light) 30%);
+
+  @media (min-width: $small) {
+    margin: $separator;
+    background-image: linear-gradient(to right, var(--color-emphasis) 30%, var(--color-light) 30%);
+  }
+
+  &:before,
+  &:after {
+    position: absolute;
+    font-size: 72px;
+    line-height: 1em;
+  }
+
+  &:before {
+    content: "{";
+    top: $separator / 2;
+    left: $separator / 2;
+    color: var(--color-light);
+
+    @media (min-width: $small) {
+      top: $separator;
+      left: $separator;
+    }
+  }
+
+  :global(.nav-large) {
+    margin-left: 30%;
+  }
+
+  :global(.nav-large a) {
+    color: white;
+
+    @media (min-width: $small) {
+      color: var(--color-neutral);
+    }
+  }
+
+  main {
+    overflow: auto;
+    padding-left: 35%;
+    padding-bottom: 3rem;
+    padding-right: 3rem;
+  }
+}
