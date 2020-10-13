@@ -6,7 +6,7 @@ import '../assets/scss/style.scss'
 const Layout = (props) => {
   const { children } = props
   return (
-    <div>
+    <div style={{paddingTop: '3rem'}}>
       <Header />
       <main>
         <section>

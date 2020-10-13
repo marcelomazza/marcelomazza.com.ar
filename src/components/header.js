@@ -1,6 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
+import headerStyles from "./header.module.scss"
 
 const colorEmphasis = getComputedStyle(document.documentElement)
                         .getPropertyValue('--color-emphasis');
@@ -20,17 +21,17 @@ const Header = (props) => {
     }
   `)
   return (
-    <header className="nav-large">
-      <h1 className="site-title">
-        <AniLink paintDrip hex={colorEmphasis} duration={0.5} to={`/`} activeClassName="active">
-          {data.site.siteMetadata.title}
-        </AniLink>
-      </h1>
-      <nav id="nav">
-        <ul className="nav">
+    <header className={headerStyles.headerContainer}>
+      <AniLink paintDrip hex={colorEmphasis} duration={0.5} to={`/`}
+        className={headerStyles.siteTitle} activeClassName={headerStyles.isActive}>
+        {data.site.siteMetadata.title}
+      </AniLink>
+      <nav className={headerStyles.navContainer}>
+        <ul className={headerStyles.navList}>
           {data.site.siteMetadata.menuLinks.map(link => (
             <li key={link.name}>
-              <AniLink paintDrip hex={colorEmphasis} duration={0.5} to={link.link} activeClassName="active">
+              <AniLink paintDrip hex={colorEmphasis} duration={0.5} to={link.link}
+                activeClassName={headerStyles.isActive}>
                 {link.name}
               </AniLink>
             </li>
