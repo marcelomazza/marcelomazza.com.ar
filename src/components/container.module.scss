@@ -4,14 +4,16 @@ $separator: 3rem;
 
 .container {
   position: relative;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: calc(100% - 6rem);
-  margin: 1.5rem;
-  background-image: linear-gradient(var(--color-emphasis) 50%, var(--color-light) 50%);
+  background-image: linear-gradient(var(--color-emphasis) 250px, var(--color-light) 250px);
 
   @media (min-width: $small) {
+    min-height: 0;
+    margin: 1.5rem;
+    height: calc(100% - 6rem);
     margin: $separator;
     background-image: linear-gradient(to right, var(--color-emphasis) 50%, var(--color-light) 50%);
   }

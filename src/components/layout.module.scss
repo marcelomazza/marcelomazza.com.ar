@@ -7,11 +7,11 @@ $separator: 3rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: calc(100% - 6rem);
-  margin: 1.5rem;
-  background-image: linear-gradient(var(--color-emphasis) 30%, var(--color-light) 30%);
+  background-image: linear-gradient(var(--color-emphasis) 250px, var(--color-light) 250px);
 
   @media (min-width: $small) {
+    margin: 1.5rem;
+    height: calc(100% - 6rem);
     margin: $separator;
     background-image: linear-gradient(to right, var(--color-emphasis) 30%, var(--color-light) 30%);
   }
@@ -49,8 +49,12 @@ $separator: 3rem;
 
   main {
     overflow: auto;
-    padding-left: 35%;
+    padding-left: 3rem;
     padding-bottom: 3rem;
     padding-right: 3rem;
+
+    @media (min-width: $small) {
+      padding-left: 35%;
+    }
   }
 }

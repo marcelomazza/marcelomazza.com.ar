@@ -3,10 +3,10 @@ import { useStaticQuery, graphql } from "gatsby"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import headerStyles from "./header.module.scss"
 
-const colorEmphasis = getComputedStyle(document.documentElement)
-                        .getPropertyValue('--color-emphasis');
-
 const Header = (props) => {
+  const colorEmphasis = getComputedStyle(document.documentElement)
+                          .getPropertyValue('--color-emphasis');
+
   const data = useStaticQuery(graphql`
     query LayoutQuery {
       site {

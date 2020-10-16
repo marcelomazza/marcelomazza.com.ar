@@ -1,11 +1,16 @@
 @import "../assets/scss/variables.scss";
 
 .header-container {
-  margin-top: -3.5rem;
+  margin-top: 20px;
+  margin-left: 80px;
+  color: var(--color-light);
 
-  @media (min-width: $large) {
+  @media (min-width: $small) {
+    margin-top: -3.5rem;
+    margin-left: 0;
     display: flex;
     align-items: center;
+    color: var(--color-neutral);
   }
 }
 
@@ -16,16 +21,12 @@
   font-size: 1.2rem;
   padding: 0 1rem 0 0;
   border-left: 4px solid transparent;
-  color: var(--color-neutral);
+  color: inherit;
   opacity: 1;
 
-  &.is-active {
-    display: none;
-
-    @media (min-width: $large) {
-      display: block;
-      opacity: 0;
-    }
+  @media (min-width: $small) {
+    border: 0;
+    padding: 0;
   }
 }
 
@@ -37,9 +38,10 @@
   a {
     display: block;
     padding: 0 1em 0 0;
+    padding-left: 1em;
     margin-bottom: 1em;
-    border-left: 4px solid transparent;
-    color: var(--color-neutral);
+    border-left: 1px solid transparent;
+    color: inherit;
     transition: all 500ms;
 
     @media (min-width: $small) {
@@ -65,10 +67,10 @@
 
     &.is-active {
       $spacer: 2em;
-      border-left-color: var(--color-neutral);
+      border-left-color: var(--color-light);
 
       @media screen and (min-width: $small) {
-        border-top: 4px solid var(--color-neutral);
+        border-top: 4px solid var(--color-light);
         border-left: none;
       }
 
@@ -85,11 +87,7 @@
   @media (min-width: $small) {
     display: flex;
     margin: 0 auto;
-    width: 70vw;
+    min-width: 400px;
     justify-content: space-around;
-  }
-
-  @media (min-width: $medium) {
-    width: auto;
   }
 }
