@@ -3,10 +3,8 @@ import { useStaticQuery, graphql } from "gatsby"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import headerStyles from "./header.module.scss"
 
-const colorEmphasis = getComputedStyle(document.documentElement)
-  .getPropertyValue('--color-emphasis') || '#fa0135';
-
 const Header = (props) => {
+  const colorEmphasis = '#fa0135';
 
   const data = useStaticQuery(graphql`
     query LayoutQuery {
@@ -21,6 +19,7 @@ const Header = (props) => {
       }
     }
   `)
+
   return (
     <header className={headerStyles.headerContainer}>
       <AniLink paintDrip hex={colorEmphasis} duration={0.5} to={`/`}

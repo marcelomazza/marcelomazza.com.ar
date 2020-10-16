@@ -9,8 +9,7 @@ class Experience extends React.Component {
     const { data } = this.props
     const work = data.allMarkdownRemark.edges
 
-    const colorEmphasis = getComputedStyle(document.documentElement)
-      .getPropertyValue('--color-emphasis');
+    const colorEmphasis = '#fa0135';
 
     return (
       <Layout>

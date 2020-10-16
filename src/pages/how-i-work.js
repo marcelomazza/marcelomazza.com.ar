@@ -5,8 +5,7 @@ import SEO from "../components/seo"
 
 class HowIWork extends React.Component {
   render() {
-    const colorEmphasis = getComputedStyle(document.documentElement)
-      .getPropertyValue('--color-emphasis');
+    const colorEmphasis = '#fa0135';
 
     return (
       <Layout>
