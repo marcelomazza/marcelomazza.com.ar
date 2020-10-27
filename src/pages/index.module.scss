@@ -1,6 +1,7 @@
 @import "../assets/scss/variables.scss";
 
 .title-container {
+  margin-top: auto;
   margin-left: 1rem;
   line-height: 1;
   color: var(--color-emphasis-dark);
@@ -9,6 +10,10 @@
     margin-left: 3rem;
     transform: translateX(50%);
   }
+}
+
+.title {
+  width: min-content;
 }
 
 .subtitle {
