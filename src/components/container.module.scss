@@ -3,23 +3,24 @@
 $separator: 3rem;
 
 .container {
-  position: relative;
   min-height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-image: linear-gradient(var(--color-emphasis) 250px, var(--color-light) 250px);
+  overflow: hidden;
+  // background-image: linear-gradient(var(--color-emphasis) 250px, var(--color-light) 250px);
 
   @media (min-width: $small) {
     min-height: 0;
     margin: 1.5rem;
-    height: calc(100% - 6rem);
-    margin: $separator;
-    background-image: linear-gradient(to right, var(--color-emphasis) 50%, var(--color-light) 50%);
+    height: 100%;
+    margin: 0;
+    background-color: var(--color-emphasis);
   }
 
   &:before,
   &:after {
+    z-index: 1;
     position: absolute;
     font-size: 72px;
     line-height: 1em;
@@ -60,4 +61,29 @@ $separator: 3rem;
       color: var(--color-neutral);
     }
   }
+}
+
+.children {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 50px;
+  padding-left: 50px;
+  height: 100vh;
+  background-color: var(--color-light);
+
+  @media (min-width: $small) {
+    margin-left: 150px;
+    padding-left: 100px;
+  }
+}
+
+.bkg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 120%;
+  background-color: var(--color-emphasis);
 }

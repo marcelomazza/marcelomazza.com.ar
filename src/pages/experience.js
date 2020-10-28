@@ -6,7 +6,7 @@ import SEO from "../components/seo"
 
 class Experience extends React.Component {
   render() {
-    const { data } = this.props
+    const { data, transitionStatus, entry, exit } = this.props
     const work = data.allMarkdownRemark.edges
 
     const colorEmphasis = '#fa0135';

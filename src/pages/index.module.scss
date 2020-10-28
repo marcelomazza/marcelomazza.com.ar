@@ -2,14 +2,8 @@
 
 .title-container {
   margin-top: auto;
-  margin-left: 1rem;
   line-height: 1;
   color: var(--color-emphasis-dark);
-
-  @media (min-width: $small) {
-    margin-left: 3rem;
-    transform: translateX(50%);
-  }
 }
 
 .title {

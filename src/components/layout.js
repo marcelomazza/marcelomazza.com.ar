@@ -1,20 +1,21 @@
 import React from "react"
+import Nav from "../components/nav"
 import layoutStyles from "./layout.module.scss"
-
-import Header from "../components/header"
 
 import '../assets/scss/style.scss'
 
 const Layout = (props) => {
   const { children } = props
+
   return (
-    <div className={layoutStyles.layout}>
-      <Header />
-      <main>
-        <section>
+    <div className={layoutStyles.container}>
+      <div className={layoutStyles.children}>
+        <Nav />
+        <main>
           {children}
-        </section>
-      </main>
+        </main>
+      </div>
+      <div className={layoutStyles.bkg} />
     </div>
   )
 }

@@ -1,5 +1,5 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import navStyles from "./nav.module.scss"
 
@@ -24,10 +24,10 @@ const Nav = (props) => {
       <ul className={navStyles.navList}>
         {data.site.siteMetadata.menuLinks.map(link => (
           <li key={link.name}>
-            <AniLink cover hex={colorEmphasis} duration={0.5} to={link.link}
+            <Link to={link.link}
               activeClassName={navStyles.isActive}>
               {link.name}
-            </AniLink>
+            </Link>
           </li>
         ))}
       </ul>
