@@ -7,7 +7,6 @@ $separator: 3rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  // background-image: linear-gradient(var(--color-emphasis) 250px, var(--color-light) 250px);
 
   @media (min-width: $small) {
     min-height: 0;
@@ -20,7 +19,7 @@ $separator: 3rem;
   &:before,
   &:after {
     z-index: 1;
-    position: absolute;
+    position: fixed;
     font-size: 72px;
     line-height: 1em;
   }
@@ -34,6 +33,18 @@ $separator: 3rem;
     @media (min-width: $small) {
       top: $separator;
       left: $separator;
+    }
+  }
+
+  &:after {
+    content: "}";
+    bottom: $separator / 2;
+    right: $separator / 2;
+    color: var(--color-emphasis-dark);
+
+    @media (min-width: $small) {
+      bottom: $separator;
+      right: $separator;
     }
   }
 
@@ -51,25 +62,17 @@ $separator: 3rem;
 }
 
 main {
-  height: 100%;
-  overflow: auto;
-  padding-left: 3rem;
   padding-bottom: 3rem;
-  padding-right: 3rem;
-
-  @media (min-width: $small) {
-    padding-left: 35%;
-  }
+  padding-right: 50px;
 }
 
 .children {
   z-index: 1;
   display: flex;
+  overflow: auto;
   flex-direction: column;
-  justify-content: space-around;
   margin-left: 50px;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 30px;
   min-height: 100%;
   background-color: var(--color-light);
 

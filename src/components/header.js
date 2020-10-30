@@ -15,7 +15,7 @@ const Header = (props) => {
   };
 
   mAboveControls.start({
-    y: ["-300%", "0%"],
+    y: ["-350%", "0%"],
   });
 
   const mBelowControls = useAnimation();

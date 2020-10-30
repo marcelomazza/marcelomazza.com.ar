@@ -9,7 +9,7 @@ const Layout = (props) => {
   const { children } = props
 
   return (
-    <div className={layoutStyles.container}>
+    <div className={layoutStyles.layout}>
       <div className={layoutStyles.children}>
         <Nav />
         <main>
