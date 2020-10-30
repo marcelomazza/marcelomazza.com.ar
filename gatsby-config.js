@@ -10,10 +10,6 @@ module.exports = {
     },
     menuLinks: [
       {
-        name: '/',
-        link: '/'
-      },
-      {
         name: 'How I Work',
         link: '/how-i-work'
       },
