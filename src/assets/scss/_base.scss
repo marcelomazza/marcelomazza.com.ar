@@ -16,6 +16,7 @@ body {
   font-weight: 300;
   line-height: 1.875;
   text-align: left;
+  background-color: var(--color-light);
   -webkit-font-smoothing: antialising;
 
   @media (min-width: $small) {

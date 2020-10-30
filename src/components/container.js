@@ -4,32 +4,43 @@ import Nav from "../components/nav"
 import containerStyles from "./container.module.scss"
 
 export default function Container({ children }) {
-  const controls = useAnimation();
+  const childrenControls = useAnimation();
 
-  controls.start({
-    x: ["100%", "50%", "50%", "0%"]
-  });
-  // controls.start();
-
-  const transition = {
+  const childrenTransition = {
     ease: "backInOut",
-    duration: 3,
-    times: [0, 0.4, 0.7, 1]
+    duration: 1.3,
+    times: [0, 1]
   };
+
+  childrenControls.start({ x: ["100%", "0%"] });
+
+  const navControls = useAnimation();
+  const navTransition = { ease: "anticipate", delay: 0.5 };
+
+  navControls.start({ x: ["-100%", "0%"], opacity: [0, 1] });
+
+  const bkgControls = useAnimation();
+  const bkgTransition = { delay: 0.5 };
+
+  bkgControls.start({ x: "-20%" });
 
   return (
     <div className={containerStyles.container}>
       <motion.div className={containerStyles.children}
-        animate={controls}
-        transition={transition}>
+        animate={childrenControls}
+        transition={childrenTransition}>
         <motion.div
-          animate={{ x: ["-100%", "0%"], opacity: [0, 1] }}
-          transition={{ ease: "anticipate", delay: 2 }}>
+          animate={navControls}
+          transition={navTransition}>
           <Nav />
         </motion.div>
         {children}
       </motion.div>
-      <div className={containerStyles.bkg} />
+      <motion.div
+        className={containerStyles.bkg}
+        animate={bkgControls}
+        transition={bkgTransition}
+      />
     </div>
   )
 }

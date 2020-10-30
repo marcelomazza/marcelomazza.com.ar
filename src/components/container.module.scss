@@ -8,14 +8,12 @@ $separator: 3rem;
   flex-direction: column;
   justify-content: space-between;
   overflow: hidden;
-  // background-image: linear-gradient(var(--color-emphasis) 250px, var(--color-light) 250px);
 
   @media (min-width: $small) {
     min-height: 0;
     margin: 1.5rem;
     height: 100%;
     margin: 0;
-    background-color: var(--color-emphasis);
   }
 
   &:before,
@@ -68,8 +66,8 @@ $separator: 3rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  margin-left: 50px;
-  padding-left: 50px;
+  margin-left: 48px;
+  padding-left: 35px;
   height: 100vh;
   background-color: var(--color-light);
 
@@ -84,6 +82,6 @@ $separator: 3rem;
   top: 0;
   bottom: 0;
   left: 0;
-  width: 120%;
+  width: 100%;
   background-color: var(--color-emphasis);
 }

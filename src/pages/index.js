@@ -9,16 +9,6 @@ import SEO from "../components/seo"
 
 import { motion, useAnimation } from "framer-motion"
 
-const titleAnimation = {
-  x: [100, 100, 100, 0],
-  opacity: [0, 0, 1, 1]
-};
-
-const titleTransition = {
-  duration: 3,
-  times: [0, 0.2, 0.8, 1]
-};
-
 const Index = (props) => {
   const data = useStaticQuery(graphql`
     query IndexQuery {
@@ -30,13 +20,26 @@ const Index = (props) => {
     }
   `)
 
+  const titleControls = useAnimation();
+
+  titleControls.start({
+    x: [300, 0],
+    opacity: [0, 1]
+  });
+
+  const titleTransition = {
+    ease: "backInOut",
+    duration: 1.5,
+    times: [0, 1]
+  };
+
   return (
     <Container>
       <SEO title="Home" />
       <div className={styles.titleContainer}>
         <motion.h1
-          animate={titleAnimation}
           className={styles.title}
+          animate={titleControls}
           transition={titleTransition}
           >
           {data.site.siteMetadata.title}
