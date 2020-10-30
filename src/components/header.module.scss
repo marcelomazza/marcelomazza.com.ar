@@ -1,9 +1,11 @@
 @import "../assets/scss/variables.scss";
 
 .header-container {
+  width: min-content;
   margin-top: 20px;
-  margin-left: 80px;
+  margin-left: 10px;
   color: var(--color-light);
+  line-height: 1.4em;
 
   @media (min-width: $small) {
     margin-top: -3.5rem;
@@ -18,16 +20,11 @@
   display: block;
   position: relative;
   margin-bottom: 0;
-  font-size: 1.2rem;
+  font-size: 2rem;
   padding: 0 1rem 0 0;
-  border-left: 4px solid transparent;
   color: inherit;
   opacity: 1;
-
-  @media (min-width: $small) {
-    border: 0;
-    padding: 0;
-  }
+  -webkit-font-smoothing: antialiased;
 }
 
 .nav-container {

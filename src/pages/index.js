@@ -2,7 +2,6 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Container from "../components/container"
 import TransitionLink from "gatsby-plugin-transition-link"
-import Header from "../components/header"
 import styles from "./index.module.scss"
 
 import SEO from "../components/seo"

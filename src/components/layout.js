@@ -1,4 +1,5 @@
 import React from "react"
+import Header from "../components/header"
 import Nav from "../components/nav"
 import layoutStyles from "./layout.module.scss"
 
@@ -15,7 +16,9 @@ const Layout = (props) => {
           {children}
         </main>
       </div>
-      <div className={layoutStyles.bkg} />
+      <div className={layoutStyles.bkg}>
+        <Header />
+      </div>
     </div>
   )
 }
