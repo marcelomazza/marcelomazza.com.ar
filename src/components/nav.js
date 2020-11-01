@@ -1,11 +1,9 @@
 import React from "react"
-import { useStaticQuery, graphql, Link } from "gatsby"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
+import { useStaticQuery, graphql } from "gatsby"
+import TransitionLink from "gatsby-plugin-transition-link"
 import navStyles from "./nav.module.scss"
 
 const Nav = (props) => {
-  const colorEmphasis = '#fa0135';
-
   const data = useStaticQuery(graphql`
     query NavQuery {
       site {
@@ -24,10 +22,13 @@ const Nav = (props) => {
       <ul className={navStyles.navList}>
         {data.site.siteMetadata.menuLinks.map(link => (
           <li key={link.name}>
-            <Link to={link.link}
+            <TransitionLink
+              to={link.link}
+              exit={{ length: 0.5 }}
+              entry={{ delay: 0.5 }}
               activeClassName={navStyles.isActive}>
               {link.name}
-            </Link>
+            </TransitionLink>
           </li>
         ))}
       </ul>
