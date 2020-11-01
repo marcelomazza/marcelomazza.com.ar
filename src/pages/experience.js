@@ -1,41 +1,47 @@
 import React from "react"
 import { graphql } from "gatsby"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
-import Layout from "../components/layout"
+import TransitionLink, { TransitionState } from "gatsby-plugin-transition-link";
+import Container from "../components/container"
 import SEO from "../components/seo"
 
 class Experience extends React.Component {
   render() {
-    const { data, transitionStatus, entry, exit } = this.props
+    const { data } = this.props
     const work = data.allMarkdownRemark.edges
 
-    const colorEmphasis = '#fa0135';
-
     return (
-      <Layout>
-        <SEO title="Experience" />
-        <div className="content">
-          <h1 className="color-emphasis">Experience</h1>
-          {work.map(({ node }) => {
-            const title = node.frontmatter.title || node.fields.slug
-            return (
-              <article key={node.fields.slug}>
-                <h2>
-                  {title}
-                </h2>
-                <div
-                  dangerouslySetInnerHTML={{
-                    __html: node.html,
-                  }}
-                />
-              </article>
-            )
-          })}
-          <AniLink paintDrip hex={colorEmphasis} duration={0.5} to="/contact-me/" className="btn">
-            Contact me
-          </AniLink>
-        </div>
-      </Layout>
+      <TransitionState>
+        {({ transitionStatus }) => (
+          <Container transitionStatus={transitionStatus}>
+            <SEO title="Experience" />
+            <div className="content">
+              <h1 className="color-emphasis">Experience</h1>
+              {work.map(({ node }) => {
+                const title = node.frontmatter.title || node.fields.slug
+                return (
+                  <article key={node.fields.slug}>
+                    <h2>
+                      {title}
+                    </h2>
+                    <div
+                      dangerouslySetInnerHTML={{
+                        __html: node.html,
+                      }}
+                    />
+                  </article>
+                )
+              })}
+              <TransitionLink
+                className="btn"
+                to="/contact-me/"
+                exit={{ length: 0.5 }}
+                entry={{ delay: 0.5 }}>
+                Contact me
+              </TransitionLink>
+            </div>
+          </Container>
+        )}
+      </TransitionState>
     )
   }
 }

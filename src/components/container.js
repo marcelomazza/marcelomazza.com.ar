@@ -1,46 +1,65 @@
 import React from "react"
-import { motion, useAnimation } from "framer-motion"
+import { motion } from "framer-motion"
+import Header from "../components/header"
 import Nav from "../components/nav"
 import containerStyles from "./container.module.scss"
 
-export default function Container({ children }) {
-  const childrenControls = useAnimation();
+import '../assets/scss/style.scss'
 
-  const childrenTransition = {
-    ease: "backInOut",
-    duration: 1.3,
-    times: [0, 1]
+export default function Container({ children, transitionStatus }) {
+  const childrenVariants = {
+    entered: {
+      x: ["100%", "0%" ],
+      transition: {
+        ease: "backInOut",
+        duration: 1,
+        delayChildren: 0.3
+      }
+    },
+    exiting: {
+      x: ["0%", "100%" ],
+      transition: {
+        ease: "backInOut",
+        duration: 0.5
+      }
+    },
   };
 
-  childrenControls.start({ x: ["100%", "0%"] });
+  const navTransition = { ease: "anticipate" };
+  const navVariants = { entered: { x: ["-100%", "0%"], opacity: [0, 1] } };
 
-  const navControls = useAnimation();
-  const navTransition = { ease: "anticipate", delay: 0.5 };
-
-  navControls.start({ x: ["-100%", "0%"], opacity: [0, 1] });
-
-  const bkgControls = useAnimation();
-  const bkgTransition = { delay: 0.5 };
-
-  bkgControls.start({ x: "-20%" });
+  const bkgVariants = {
+    entered: {
+      x: "-20%",
+      transition: {
+        ease: "easeOut",
+        delay: 0.5
+      }
+    },
+    exiting: {
+      x: "0%",
+      transition: {
+        ease: "easeOut",
+        delay: 0.2
+      }
+    }
+  };
 
   return (
-    <div className={containerStyles.container}>
-      <motion.div className={containerStyles.children}
-        animate={childrenControls}
-        transition={childrenTransition}>
+    <motion.div className={containerStyles.container}
+      animate={transitionStatus}>
+      <motion.div
+        className={containerStyles.children}
+        variants={childrenVariants}>
         <motion.div
-          animate={navControls}
-          transition={navTransition}>
+          transition={navTransition}
+          variants={navVariants}>
           <Nav />
         </motion.div>
         {children}
       </motion.div>
-      <motion.div
-        className={containerStyles.bkg}
-        animate={bkgControls}
-        transition={bkgTransition}
-      />
-    </div>
+      <motion.div className={containerStyles.bkg} variants={bkgVariants} />
+      <Header transitionStatus={transitionStatus} />
+    </motion.div>
   )
 }

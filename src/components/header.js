@@ -1,52 +1,67 @@
 import React from "react"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
-import Nav from "./nav"
+import TransitionLink from "gatsby-plugin-transition-link"
 import headerStyles from "./header.module.scss"
-import { motion, useAnimation } from "framer-motion"
+import { motion } from "framer-motion"
 
-const Header = (props) => {
-  const colorEmphasis = '#fa0135';
-
-  const mAboveControls = useAnimation();
-
+const Header = (transitionStatus) => {
   const mAboveTransition = {
     ease: "backInOut",
     duration: 0.5
   };
 
-  mAboveControls.start({
-    y: ["-350%", "0%"],
-  });
-
-  const mBelowControls = useAnimation();
+  const mAboveVariants = {
+    entered: {
+      y: ["-360%", "0%"],
+      opacity: [1, 1]
+    },
+    exited: {
+      y: ["0%", "-360%"],
+      opacity: [1, 0]
+    }
+  };
 
   const mBelowTransition = {
     ease: "backInOut",
     duration: 1.3,
   };
 
-  mBelowControls.start({
-    x: ["100%", "0%", "0%"],
-    y: ["0%", "0%", "-88%"],
-    rotate: [0, 180, 180],
-  });
+  const mBelowVariants = {
+    entered: {
+      x: ["100%", "0%", "0%"],
+      y: ["0%", "0%", "-88%"],
+      rotate: [0, 180, 180],
+      opacity: [0, 1, 1]
+    },
+    exited: {
+      x: ["0%", "0%", "100%"],
+      y: ["-88%", "0%", "0%"],
+      rotate: [180, 180, 0],
+      opacity: [1, 0, 0]
+    }
+  };
 
   return (
-    <header className={headerStyles.headerContainer}>
-      <AniLink paintDrip hex={colorEmphasis} duration={0.5} to={`/`}
-        className={headerStyles.siteTitle} activeClassName={headerStyles.isActive}>
+    <motion.header
+      className={headerStyles.headerContainer}
+      animate={transitionStatus}>
+      <TransitionLink
+        to={`/`}
+        exit={{ length: 1 }}
+        entry={{ delay: 0.6 }}
+        className={headerStyles.siteTitle}
+        activeClassName={headerStyles.isActive}>
         <motion.div
-          animate={mAboveControls}
-          transition={mAboveTransition}>
+          transition={mAboveTransition}
+          variants={mAboveVariants}>
           M
         </motion.div>
         <motion.div
-          animate={mBelowControls}
-          transition={mBelowTransition}>
+          transition={mBelowTransition}
+          variants={mBelowVariants}>
           M
         </motion.div>
-      </AniLink>
-    </header>
+      </TransitionLink>
+    </motion.header>
   )
 }
 
