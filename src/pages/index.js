@@ -46,6 +46,19 @@ const Index = (props) => {
                 <span className={styles.subtitle}>Frontend Designer</span>
               </motion.h1>
             </div>
+            <div className="content">
+              <ul>
+                <li>Crafting websites since 2008.</li>
+                <li>+7 years of experience in top e-commerce companies</li>
+                <li>+6 years (and counting) of freelance experience</li>
+                <li>
+                  <a href="https://www.toptal.com/resume/marcelo-mazza"
+                    target="_blank">
+                    Toptal Talent
+                  </a> since 2015
+                </li>
+              </ul>
+            </div>
           </Container>
         )
       }}
