@@ -7,7 +7,7 @@ import containerStyles from "./container.module.scss"
 import '../assets/scss/style.scss'
 
 export default function Container({ children, transitionStatus }) {
-  const childrenVariants = {
+  const navChildrenVariants = {
     entered: {
       x: ["100%", "0%" ],
       transition: {
@@ -49,14 +49,16 @@ export default function Container({ children, transitionStatus }) {
     <motion.div className={containerStyles.container}
       animate={transitionStatus}>
       <motion.div
-        className={containerStyles.children}
-        variants={childrenVariants}>
+        className={containerStyles.navChildren}
+        variants={navChildrenVariants}>
         <motion.div
           transition={navTransition}
           variants={navVariants}>
           <Nav />
         </motion.div>
-        {children}
+        <div className={containerStyles.children}>
+          {children}
+        </div>
       </motion.div>
       <motion.div className={containerStyles.bkg} variants={bkgVariants} />
       <Header transitionStatus={transitionStatus} />

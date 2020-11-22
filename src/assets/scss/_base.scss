@@ -11,7 +11,7 @@ body {
   position: relative;
   margin: 0 auto;
   overflow: hidden;
-  font-family: 'Noticia Text', serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 16px;
   font-weight: 300;
   line-height: 1.875;
@@ -25,6 +25,10 @@ body {
   }
 }
 
+p, ul {
+  font-family: "Noticia Text", sans-serif;
+}
+
 a {
   text-decoration: none;
   color: var(--color-emphasis);
@@ -35,7 +39,7 @@ a {
 }
 
 ul {
-  list-style: disc;
+  list-style: circle;
 }
 
 h1, h2 {
@@ -68,6 +72,5 @@ img {
 }
 
 .color-emphasis {
-  margin-top: 8rem;
   color: var(--color-emphasis-dark);
 }

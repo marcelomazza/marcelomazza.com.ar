@@ -61,12 +61,11 @@ $separator: 3rem;
   }
 }
 
-.children {
+.nav-children {
   z-index: 1;
   display: flex;
-  flex-direction: column;
-  overflow: auto;
   margin-left: 48px;
+  padding-top: 150px;
   padding-left: 35px;
   padding-right: 50px;
   padding-bottom: 50px;
@@ -87,4 +86,10 @@ $separator: 3rem;
   left: 0;
   width: 100%;
   background-color: var(--color-emphasis);
+}
+
+.children {
+  padding: 128px 50px 228px 30px;
+  margin-right: 50px;
+  overflow: auto;
 }

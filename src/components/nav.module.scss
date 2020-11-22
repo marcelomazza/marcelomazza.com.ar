@@ -1,8 +1,8 @@
 @import "../assets/scss/variables.scss";
 
 .nav-container {
-  margin-top: 150px;
-  margin-bottom: auto;
+  min-width: 250px;
+  padding-right: 50px;
   color: var(--color-emphasis-dark);
   font-size: 0.8em;
 
@@ -12,6 +12,7 @@
     border-left: 1px solid transparent;
     color: inherit;
     transition: all 500ms;
+    font-family: "Montserrat", sans-serif;
 
     @media (min-width: $small) {
       margin-bottom: 0;
