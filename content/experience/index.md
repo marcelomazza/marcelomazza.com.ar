@@ -1,6 +1,7 @@
 ---
 title: "Experience"
 date: 2021-05-03T16:34:57-03:00
+menu: "main"
 ---
 
 ## Airbrake.io (via Toptal) - Head of UX & Web Design

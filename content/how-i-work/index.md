@@ -1,6 +1,7 @@
 ---
 title: "How I Work"
 date: 2021-05-03T16:34:57-03:00
+menu: "main"
 ---
 ## Get the data.
 Learn from the real world. Data is easier to find than ever, it's everywhere. Use it wisely, and keep using it throughout the project, before, during, after. Shape your interface around it.
