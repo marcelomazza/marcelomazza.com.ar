@@ -2,3 +2,10 @@ baseURL = "https://marcelomazza.com.ar/"
 languageCode = "en-es"
 title = "Marcelo Mazza"
 theme = "ananke"
+pluralizelisttitles = "false"
+
+[menu]
+  [[menu.main]]
+    identifier = "blog"
+    name = "Blog"
+    url = "/blog/"
